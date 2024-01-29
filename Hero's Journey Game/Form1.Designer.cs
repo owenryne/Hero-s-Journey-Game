@@ -43,9 +43,10 @@
             // 
             // forwardButt
             // 
-            this.forwardButt.Location = new System.Drawing.Point(371, 273);
+            this.forwardButt.Location = new System.Drawing.Point(495, 336);
+            this.forwardButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.forwardButt.Name = "forwardButt";
-            this.forwardButt.Size = new System.Drawing.Size(53, 23);
+            this.forwardButt.Size = new System.Drawing.Size(71, 28);
             this.forwardButt.TabIndex = 0;
             this.forwardButt.Text = "Forward";
             this.forwardButt.UseVisualStyleBackColor = true;
@@ -53,26 +54,30 @@
             // 
             // playerCoords
             // 
-            this.playerCoords.Location = new System.Drawing.Point(555, 30);
+            this.playerCoords.Location = new System.Drawing.Point(740, 37);
+            this.playerCoords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.playerCoords.Name = "playerCoords";
-            this.playerCoords.Size = new System.Drawing.Size(100, 20);
+            this.playerCoords.Size = new System.Drawing.Size(132, 22);
             this.playerCoords.TabIndex = 2;
             this.playerCoords.TextChanged += new System.EventHandler(this.playerCoords_TextChanged);
             // 
             // updateBox
             // 
             this.updateBox.FormattingEnabled = true;
-            this.updateBox.Location = new System.Drawing.Point(308, 66);
+            this.updateBox.ItemHeight = 16;
+            this.updateBox.Location = new System.Drawing.Point(411, 81);
+            this.updateBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updateBox.Name = "updateBox";
-            this.updateBox.Size = new System.Drawing.Size(173, 147);
+            this.updateBox.Size = new System.Drawing.Size(229, 180);
             this.updateBox.TabIndex = 3;
             this.updateBox.SelectedIndexChanged += new System.EventHandler(this.updateBox_SelectedIndexChanged);
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(371, 331);
+            this.backButton.Location = new System.Drawing.Point(495, 407);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(53, 23);
+            this.backButton.Size = new System.Drawing.Size(71, 28);
             this.backButton.TabIndex = 4;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -80,9 +85,10 @@
             // 
             // rightButt
             // 
-            this.rightButt.Location = new System.Drawing.Point(430, 302);
+            this.rightButt.Location = new System.Drawing.Point(573, 372);
+            this.rightButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rightButt.Name = "rightButt";
-            this.rightButt.Size = new System.Drawing.Size(53, 23);
+            this.rightButt.Size = new System.Drawing.Size(71, 28);
             this.rightButt.TabIndex = 5;
             this.rightButt.Text = "Right";
             this.rightButt.UseVisualStyleBackColor = true;
@@ -90,9 +96,10 @@
             // 
             // leftButton
             // 
-            this.leftButton.Location = new System.Drawing.Point(312, 302);
+            this.leftButton.Location = new System.Drawing.Point(416, 372);
+            this.leftButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leftButton.Name = "leftButton";
-            this.leftButton.Size = new System.Drawing.Size(53, 23);
+            this.leftButton.Size = new System.Drawing.Size(71, 28);
             this.leftButton.TabIndex = 6;
             this.leftButton.Text = "Left";
             this.leftButton.UseVisualStyleBackColor = true;
@@ -100,54 +107,59 @@
             // 
             // combatText
             // 
-            this.combatText.Location = new System.Drawing.Point(47, 193);
+            this.combatText.Location = new System.Drawing.Point(63, 238);
+            this.combatText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.combatText.Name = "combatText";
-            this.combatText.Size = new System.Drawing.Size(100, 20);
+            this.combatText.Size = new System.Drawing.Size(132, 22);
             this.combatText.TabIndex = 7;
             this.combatText.Text = "Combat Buttons";
             this.combatText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // attackButt
             // 
-            this.attackButt.Location = new System.Drawing.Point(27, 219);
+            this.attackButt.Location = new System.Drawing.Point(36, 270);
+            this.attackButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.attackButt.Name = "attackButt";
-            this.attackButt.Size = new System.Drawing.Size(53, 23);
+            this.attackButt.Size = new System.Drawing.Size(71, 28);
             this.attackButt.TabIndex = 8;
             this.attackButt.Text = "Attack";
             this.attackButt.UseVisualStyleBackColor = true;
             // 
             // blockButt
             // 
-            this.blockButt.Location = new System.Drawing.Point(112, 219);
+            this.blockButt.Location = new System.Drawing.Point(149, 270);
+            this.blockButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.blockButt.Name = "blockButt";
-            this.blockButt.Size = new System.Drawing.Size(53, 23);
+            this.blockButt.Size = new System.Drawing.Size(71, 28);
             this.blockButt.TabIndex = 9;
             this.blockButt.Text = "Block";
             this.blockButt.UseVisualStyleBackColor = true;
             // 
             // okButt
             // 
-            this.okButt.Location = new System.Drawing.Point(371, 302);
+            this.okButt.Location = new System.Drawing.Point(495, 372);
+            this.okButt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.okButt.Name = "okButt";
-            this.okButt.Size = new System.Drawing.Size(53, 23);
+            this.okButt.Size = new System.Drawing.Size(71, 28);
             this.okButt.TabIndex = 10;
             this.okButt.Text = "OK";
             this.okButt.UseVisualStyleBackColor = true;
             // 
             // navText
             // 
-            this.navText.Location = new System.Drawing.Point(347, 247);
+            this.navText.Location = new System.Drawing.Point(463, 304);
+            this.navText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navText.Name = "navText";
-            this.navText.Size = new System.Drawing.Size(100, 20);
+            this.navText.Size = new System.Drawing.Size(132, 22);
             this.navText.TabIndex = 11;
             this.navText.Text = "Navigation Buttons";
             this.navText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.navText);
             this.Controls.Add(this.okButt);
             this.Controls.Add(this.blockButt);
@@ -159,6 +171,7 @@
             this.Controls.Add(this.updateBox);
             this.Controls.Add(this.playerCoords);
             this.Controls.Add(this.forwardButt);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
