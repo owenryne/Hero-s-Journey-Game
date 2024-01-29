@@ -54,6 +54,11 @@ namespace Hero_s_Journey_Game
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         //Test comment to see if i can push changes
     }
 }
