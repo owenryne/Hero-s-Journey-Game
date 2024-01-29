@@ -22,5 +22,10 @@ namespace Hero_s_Journey_Game
             //Need to assign the text from txtBoxName to a player name variable
             //string name = txtboxName.Text;
         }
+
+        private void NameForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

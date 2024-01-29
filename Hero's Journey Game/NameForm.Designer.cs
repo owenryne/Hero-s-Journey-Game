@@ -36,24 +36,27 @@
             // EnterNameLabel
             // 
             this.EnterNameLabel.AutoSize = true;
-            this.EnterNameLabel.Location = new System.Drawing.Point(58, 26);
+            this.EnterNameLabel.Location = new System.Drawing.Point(44, 21);
+            this.EnterNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EnterNameLabel.Name = "EnterNameLabel";
-            this.EnterNameLabel.Size = new System.Drawing.Size(145, 16);
+            this.EnterNameLabel.Size = new System.Drawing.Size(117, 13);
             this.EnterNameLabel.TabIndex = 0;
             this.EnterNameLabel.Text = "Enter Your Name Hero!";
             // 
             // txtboxName
             // 
-            this.txtboxName.Location = new System.Drawing.Point(61, 45);
+            this.txtboxName.Location = new System.Drawing.Point(46, 37);
+            this.txtboxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtboxName.Name = "txtboxName";
-            this.txtboxName.Size = new System.Drawing.Size(142, 22);
+            this.txtboxName.Size = new System.Drawing.Size(108, 20);
             this.txtboxName.TabIndex = 1;
             // 
             // btnName
             // 
-            this.btnName.Location = new System.Drawing.Point(61, 73);
+            this.btnName.Location = new System.Drawing.Point(46, 59);
+            this.btnName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnName.Name = "btnName";
-            this.btnName.Size = new System.Drawing.Size(75, 23);
+            this.btnName.Size = new System.Drawing.Size(56, 19);
             this.btnName.TabIndex = 2;
             this.btnName.Text = "Submit";
             this.btnName.UseVisualStyleBackColor = true;
@@ -61,15 +64,17 @@
             // 
             // NameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 176);
+            this.ClientSize = new System.Drawing.Size(333, 143);
             this.Controls.Add(this.btnName);
             this.Controls.Add(this.txtboxName);
             this.Controls.Add(this.EnterNameLabel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "NameForm";
             this.Text = "NameForm";
+            this.Load += new System.EventHandler(this.NameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
