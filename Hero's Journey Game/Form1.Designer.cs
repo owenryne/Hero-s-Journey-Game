@@ -34,11 +34,16 @@
             this.backButton = new System.Windows.Forms.Button();
             this.rightButt = new System.Windows.Forms.Button();
             this.leftButton = new System.Windows.Forms.Button();
+            this.combatText = new System.Windows.Forms.TextBox();
+            this.attackButt = new System.Windows.Forms.Button();
+            this.blockButt = new System.Windows.Forms.Button();
+            this.okButt = new System.Windows.Forms.Button();
+            this.navText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // forwardButt
             // 
-            this.forwardButt.Location = new System.Drawing.Point(284, 219);
+            this.forwardButt.Location = new System.Drawing.Point(371, 273);
             this.forwardButt.Name = "forwardButt";
             this.forwardButt.Size = new System.Drawing.Size(53, 23);
             this.forwardButt.TabIndex = 0;
@@ -57,7 +62,7 @@
             // updateBox
             // 
             this.updateBox.FormattingEnabled = true;
-            this.updateBox.Location = new System.Drawing.Point(224, 66);
+            this.updateBox.Location = new System.Drawing.Point(308, 66);
             this.updateBox.Name = "updateBox";
             this.updateBox.Size = new System.Drawing.Size(173, 147);
             this.updateBox.TabIndex = 3;
@@ -65,7 +70,7 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(284, 248);
+            this.backButton.Location = new System.Drawing.Point(371, 331);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(53, 23);
             this.backButton.TabIndex = 4;
@@ -75,7 +80,7 @@
             // 
             // rightButt
             // 
-            this.rightButt.Location = new System.Drawing.Point(343, 235);
+            this.rightButt.Location = new System.Drawing.Point(430, 302);
             this.rightButt.Name = "rightButt";
             this.rightButt.Size = new System.Drawing.Size(53, 23);
             this.rightButt.TabIndex = 5;
@@ -85,7 +90,7 @@
             // 
             // leftButton
             // 
-            this.leftButton.Location = new System.Drawing.Point(225, 235);
+            this.leftButton.Location = new System.Drawing.Point(312, 302);
             this.leftButton.Name = "leftButton";
             this.leftButton.Size = new System.Drawing.Size(53, 23);
             this.leftButton.TabIndex = 6;
@@ -93,11 +98,61 @@
             this.leftButton.UseVisualStyleBackColor = true;
             this.leftButton.Click += new System.EventHandler(this.leftButton_Click);
             // 
+            // combatText
+            // 
+            this.combatText.Location = new System.Drawing.Point(47, 193);
+            this.combatText.Name = "combatText";
+            this.combatText.Size = new System.Drawing.Size(100, 20);
+            this.combatText.TabIndex = 7;
+            this.combatText.Text = "Combat Buttons";
+            this.combatText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // attackButt
+            // 
+            this.attackButt.Location = new System.Drawing.Point(27, 219);
+            this.attackButt.Name = "attackButt";
+            this.attackButt.Size = new System.Drawing.Size(53, 23);
+            this.attackButt.TabIndex = 8;
+            this.attackButt.Text = "Attack";
+            this.attackButt.UseVisualStyleBackColor = true;
+            // 
+            // blockButt
+            // 
+            this.blockButt.Location = new System.Drawing.Point(112, 219);
+            this.blockButt.Name = "blockButt";
+            this.blockButt.Size = new System.Drawing.Size(53, 23);
+            this.blockButt.TabIndex = 9;
+            this.blockButt.Text = "Block";
+            this.blockButt.UseVisualStyleBackColor = true;
+            // 
+            // okButt
+            // 
+            this.okButt.Location = new System.Drawing.Point(371, 302);
+            this.okButt.Name = "okButt";
+            this.okButt.Size = new System.Drawing.Size(53, 23);
+            this.okButt.TabIndex = 10;
+            this.okButt.Text = "OK";
+            this.okButt.UseVisualStyleBackColor = true;
+            // 
+            // navText
+            // 
+            this.navText.Location = new System.Drawing.Point(347, 247);
+            this.navText.Name = "navText";
+            this.navText.Size = new System.Drawing.Size(100, 20);
+            this.navText.TabIndex = 11;
+            this.navText.Text = "Navigation Buttons";
+            this.navText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.navText);
+            this.Controls.Add(this.okButt);
+            this.Controls.Add(this.blockButt);
+            this.Controls.Add(this.attackButt);
+            this.Controls.Add(this.combatText);
             this.Controls.Add(this.leftButton);
             this.Controls.Add(this.rightButt);
             this.Controls.Add(this.backButton);
@@ -120,6 +175,11 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button rightButt;
         private System.Windows.Forms.Button leftButton;
+        private System.Windows.Forms.TextBox combatText;
+        private System.Windows.Forms.Button attackButt;
+        private System.Windows.Forms.Button blockButt;
+        private System.Windows.Forms.Button okButt;
+        private System.Windows.Forms.TextBox navText;
     }
 }
 
