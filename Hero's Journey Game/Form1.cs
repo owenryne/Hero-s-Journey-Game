@@ -23,12 +23,34 @@ namespace Hero_s_Journey_Game
 
         }
 
+        //Back Button
         private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
+        //Right Button
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forwardButt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerCoords_TextChanged(object sender, EventArgs e)
         {
 
         }
