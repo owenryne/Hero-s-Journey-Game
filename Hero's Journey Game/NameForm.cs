@@ -16,5 +16,11 @@ namespace Hero_s_Journey_Game
         {
             InitializeComponent();
         }
+
+        private void btnName_Click(object sender, EventArgs e)
+        {
+            //Need to assign the text from txtBoxName to a player name variable
+            //string name = txtboxName.Text;
+        }
     }
 }
