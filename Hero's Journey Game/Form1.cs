@@ -13,6 +13,8 @@ namespace Hero_s_Journey_Game
 {
     public partial class Form1 : Form
     {
+
+        //Need to create an instance of the World in this form
         public Form1()
         {
             InitializeComponent();
