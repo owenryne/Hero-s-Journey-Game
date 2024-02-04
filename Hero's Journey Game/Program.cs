@@ -16,6 +16,7 @@ namespace Hero_s_Journey_Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new NameForm());
             Application.Run(new Form1());
         }
     }

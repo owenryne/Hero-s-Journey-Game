@@ -69,7 +69,7 @@
             // 
             this.playerCoords.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerCoords.Location = new System.Drawing.Point(1074, 11);
-            this.playerCoords.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerCoords.Margin = new System.Windows.Forms.Padding(2);
             this.playerCoords.Name = "playerCoords";
             this.playerCoords.Size = new System.Drawing.Size(100, 23);
             this.playerCoords.TabIndex = 2;
@@ -85,7 +85,7 @@
             this.updateBox.FormattingEnabled = true;
             this.updateBox.ItemHeight = 15;
             this.updateBox.Location = new System.Drawing.Point(455, 56);
-            this.updateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateBox.Margin = new System.Windows.Forms.Padding(2);
             this.updateBox.Name = "updateBox";
             this.updateBox.Size = new System.Drawing.Size(301, 199);
             this.updateBox.TabIndex = 3;
@@ -128,7 +128,7 @@
             // 
             this.combatText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combatText.Location = new System.Drawing.Point(92, 265);
-            this.combatText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combatText.Margin = new System.Windows.Forms.Padding(2);
             this.combatText.Name = "combatText";
             this.combatText.Size = new System.Drawing.Size(100, 23);
             this.combatText.TabIndex = 7;
@@ -149,7 +149,7 @@
             // 
             this.blockButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blockButt.Location = new System.Drawing.Point(172, 289);
-            this.blockButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blockButt.Margin = new System.Windows.Forms.Padding(2);
             this.blockButt.Name = "blockButt";
             this.blockButt.Size = new System.Drawing.Size(53, 23);
             this.blockButt.TabIndex = 9;
@@ -160,7 +160,7 @@
             // 
             this.okButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButt.Location = new System.Drawing.Point(927, 272);
-            this.okButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.okButt.Margin = new System.Windows.Forms.Padding(2);
             this.okButt.Name = "okButt";
             this.okButt.Size = new System.Drawing.Size(53, 23);
             this.okButt.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.navText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navText.Location = new System.Drawing.Point(547, 272);
-            this.navText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navText.Margin = new System.Windows.Forms.Padding(2);
             this.navText.Name = "navText";
             this.navText.Size = new System.Drawing.Size(120, 23);
             this.navText.TabIndex = 11;
@@ -308,6 +308,7 @@
             this.charNam.TabIndex = 16;
             this.charNam.Text = "Character Name";
             this.charNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.charNam.TextChanged += new System.EventHandler(this.charNam_TextChanged);
             // 
             // Form1
             // 

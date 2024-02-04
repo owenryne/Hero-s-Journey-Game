@@ -12,6 +12,9 @@ namespace Hero_s_Journey_Game
 {
     public partial class NameForm : Form
     {
+
+        public string CharacterName { get; private set; }
+
         public NameForm()
         {
             InitializeComponent();
@@ -20,7 +23,10 @@ namespace Hero_s_Journey_Game
         private void btnName_Click(object sender, EventArgs e)
         {
             //Need to assign the text from txtBoxName to a player name variable
-            //string name = txtboxName.Text;
+            CharacterName = txtboxName.Text;
+            //MessageBox.Show($"Character's name is {name}");
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void NameForm_Load(object sender, EventArgs e)

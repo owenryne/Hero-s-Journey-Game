@@ -17,8 +17,12 @@ namespace Hero_s_Journey_Game
         {
             InitializeComponent();
             //Test comment
+            NameForm name = new NameForm();
+            if (name.ShowDialog() == DialogResult.OK ) 
+            {
+                charNam.Text = name.CharacterName;
+            }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -59,6 +63,11 @@ namespace Hero_s_Journey_Game
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void charNam_TextChanged(object sender, EventArgs e)
+        {
+            
         }
         //Test comment to see if i can push changes
 
