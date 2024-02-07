@@ -56,12 +56,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.titleBox = new System.Windows.Forms.TextBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.startButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // forwardButt
             // 
             this.forwardButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButt.Location = new System.Drawing.Point(574, 300);
+            this.forwardButt.Location = new System.Drawing.Point(574, 387);
             this.forwardButt.Name = "forwardButt";
             this.forwardButt.Size = new System.Drawing.Size(63, 23);
             this.forwardButt.TabIndex = 0;
@@ -79,7 +82,6 @@
             this.playerCoords.TabIndex = 2;
             this.playerCoords.Text = "Coordinates";
             this.playerCoords.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.playerCoords.TextChanged += new System.EventHandler(this.playerCoords_TextChanged);
             // 
             // updateBox
             // 
@@ -88,39 +90,36 @@
             this.updateBox.ForeColor = System.Drawing.SystemColors.Window;
             this.updateBox.FormattingEnabled = true;
             this.updateBox.ItemHeight = 15;
-            this.updateBox.Location = new System.Drawing.Point(455, 56);
+            this.updateBox.Location = new System.Drawing.Point(450, 96);
             this.updateBox.Margin = new System.Windows.Forms.Padding(2);
             this.updateBox.Name = "updateBox";
             this.updateBox.Size = new System.Drawing.Size(301, 199);
             this.updateBox.TabIndex = 3;
-            //this.updateBox.SelectedIndexChanged += new System.EventHandler(this.updateBox_SelectedIndexChanged);
             // 
             // backButton
             // 
             this.backButton.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(574, 353);
+            this.backButton.Location = new System.Drawing.Point(574, 441);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(53, 23);
+            this.backButton.Size = new System.Drawing.Size(63, 23);
             this.backButton.TabIndex = 4;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
-            //this.backButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // rightButt
             // 
             this.rightButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightButt.Location = new System.Drawing.Point(635, 331);
+            this.rightButt.Location = new System.Drawing.Point(635, 416);
             this.rightButt.Name = "rightButt";
             this.rightButt.Size = new System.Drawing.Size(53, 23);
             this.rightButt.TabIndex = 5;
             this.rightButt.Text = "Right";
             this.rightButt.UseVisualStyleBackColor = true;
-            //this.rightButt.Click += new System.EventHandler(this.button3_Click);
             // 
             // leftButton
             // 
             this.leftButton.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftButton.Location = new System.Drawing.Point(515, 331);
+            this.leftButton.Location = new System.Drawing.Point(522, 416);
             this.leftButton.Name = "leftButton";
             this.leftButton.Size = new System.Drawing.Size(53, 23);
             this.leftButton.TabIndex = 6;
@@ -174,7 +173,7 @@
             // navText
             // 
             this.navText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navText.Location = new System.Drawing.Point(547, 272);
+            this.navText.Location = new System.Drawing.Point(546, 359);
             this.navText.Margin = new System.Windows.Forms.Padding(2);
             this.navText.Name = "navText";
             this.navText.Size = new System.Drawing.Size(120, 23);
@@ -256,7 +255,6 @@
             this.title.Size = new System.Drawing.Size(262, 45);
             this.title.TabIndex = 19;
             this.title.Text = "Hero\'s Journey";
-            //this.title.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -312,7 +310,6 @@
             this.charNam.TabIndex = 16;
             this.charNam.Text = "Character Name";
             this.charNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.charNam.TextChanged += new System.EventHandler(this.charNam_TextChanged);
             // 
             // charLevel
             // 
@@ -324,7 +321,6 @@
             this.charLevel.TabIndex = 17;
             this.charLevel.Text = "Lvl.";
             this.charLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.charLevel.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox2
             // 
@@ -349,7 +345,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(78, 132);
+            this.textBox3.Location = new System.Drawing.Point(78, 144);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(128, 23);
@@ -357,12 +353,42 @@
             this.textBox3.Text = "Character Region";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // titleBox
+            // 
+            this.titleBox.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleBox.Location = new System.Drawing.Point(439, 20);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(328, 48);
+            this.titleBox.TabIndex = 21;
+            this.titleBox.Text = "Hero\'s Journey";
+            this.titleBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(78, 121);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(128, 10);
+            this.progressBar.TabIndex = 22;
+            // 
+            // startButton
+            // 
+            this.startButton.Location = new System.Drawing.Point(562, 300);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.TabIndex = 23;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.titleBox);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -385,7 +411,7 @@
             this.Controls.Add(this.forwardButt);
             this.Name = "Form1";
             this.Text = "s";
-            //this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,6 +447,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox titleBox;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button startButton;
     }
 }
 

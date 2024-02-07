@@ -20,6 +20,7 @@ namespace Hero_s_Journey_Game
             InitializeComponent();
             //Test comment
             NameForm name = new NameForm();
+            ListBox updateBox = new ListBox();
             if (name.ShowDialog() == DialogResult.OK ) 
             {
                 charNam.Text = name.CharacterName;
@@ -32,6 +33,18 @@ namespace Hero_s_Journey_Game
         }
         //Forward Button
         private void forwardButt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            NameForm name = new NameForm();
+            string startingText = "Welcome to Hero's Journey " + charNam.Text;
+            updateBox.Items.Add(startingText);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
