@@ -25,51 +25,15 @@ namespace Hero_s_Journey_Game
                 charNam.Text = name.CharacterName;
             }
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //Back Button
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Right Button
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Left Button
         private void leftButton_Click(object sender, EventArgs e)
         {
 
         }
-
+        //Forward Button
         private void forwardButt_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void updateBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void playerCoords_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void charNam_TextChanged(object sender, EventArgs e)
-        {
-            
         }
         //Test comment to see if i can push changes
 
