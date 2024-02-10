@@ -304,6 +304,7 @@
             this.charNam.Location = new System.Drawing.Point(78, 56);
             this.charNam.Margin = new System.Windows.Forms.Padding(2);
             this.charNam.Name = "charNam";
+            this.charNam.ReadOnly = true;
             this.charNam.Size = new System.Drawing.Size(128, 23);
             this.charNam.TabIndex = 16;
             this.charNam.Text = "Character Name";
