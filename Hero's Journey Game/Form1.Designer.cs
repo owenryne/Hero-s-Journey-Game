@@ -78,6 +78,7 @@
             this.playerCoords.Location = new System.Drawing.Point(1074, 11);
             this.playerCoords.Margin = new System.Windows.Forms.Padding(2);
             this.playerCoords.Name = "playerCoords";
+            this.playerCoords.ReadOnly = true;
             this.playerCoords.Size = new System.Drawing.Size(100, 23);
             this.playerCoords.TabIndex = 2;
             this.playerCoords.Text = "Coordinates";
@@ -133,6 +134,7 @@
             this.combatText.Location = new System.Drawing.Point(97, 262);
             this.combatText.Margin = new System.Windows.Forms.Padding(2);
             this.combatText.Name = "combatText";
+            this.combatText.ReadOnly = true;
             this.combatText.Size = new System.Drawing.Size(100, 23);
             this.combatText.TabIndex = 7;
             this.combatText.Text = "Combat Buttons";
@@ -176,6 +178,7 @@
             this.navText.Location = new System.Drawing.Point(546, 359);
             this.navText.Margin = new System.Windows.Forms.Padding(2);
             this.navText.Name = "navText";
+            this.navText.ReadOnly = true;
             this.navText.Size = new System.Drawing.Size(120, 23);
             this.navText.TabIndex = 11;
             this.navText.Text = "Navigation Buttons";
@@ -262,6 +265,7 @@
             this.textBox1.Location = new System.Drawing.Point(949, 248);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(120, 23);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "Selection Buttons";
@@ -295,6 +299,7 @@
             this.charInfo.Location = new System.Drawing.Point(78, 20);
             this.charInfo.Margin = new System.Windows.Forms.Padding(2);
             this.charInfo.Name = "charInfo";
+            this.charInfo.ReadOnly = true;
             this.charInfo.Size = new System.Drawing.Size(128, 23);
             this.charInfo.TabIndex = 15;
             this.charInfo.Text = "Character Information";
@@ -318,6 +323,7 @@
             this.charLevel.Location = new System.Drawing.Point(78, 93);
             this.charLevel.Margin = new System.Windows.Forms.Padding(2);
             this.charLevel.Name = "charLevel";
+            this.charLevel.ReadOnly = true;
             this.charLevel.Size = new System.Drawing.Size(60, 23);
             this.charLevel.TabIndex = 17;
             this.charLevel.Text = "Lvl.";
@@ -329,6 +335,7 @@
             this.textBox2.Location = new System.Drawing.Point(146, 93);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(60, 23);
             this.textBox2.TabIndex = 18;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -349,6 +356,7 @@
             this.textBox3.Location = new System.Drawing.Point(78, 144);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(128, 23);
             this.textBox3.TabIndex = 20;
             this.textBox3.Text = "Character Region";
@@ -359,6 +367,7 @@
             this.titleBox.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleBox.Location = new System.Drawing.Point(439, 20);
             this.titleBox.Name = "titleBox";
+            this.titleBox.ReadOnly = true;
             this.titleBox.Size = new System.Drawing.Size(328, 48);
             this.titleBox.TabIndex = 21;
             this.titleBox.Text = "Hero\'s Journey";
