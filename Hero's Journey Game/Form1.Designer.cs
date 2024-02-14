@@ -91,10 +91,10 @@
             this.updateBox.ForeColor = System.Drawing.SystemColors.Window;
             this.updateBox.FormattingEnabled = true;
             this.updateBox.ItemHeight = 15;
-            this.updateBox.Location = new System.Drawing.Point(450, 96);
+            this.updateBox.Location = new System.Drawing.Point(292, 81);
             this.updateBox.Margin = new System.Windows.Forms.Padding(2);
             this.updateBox.Name = "updateBox";
-            this.updateBox.Size = new System.Drawing.Size(301, 199);
+            this.updateBox.Size = new System.Drawing.Size(612, 214);
             this.updateBox.TabIndex = 3;
             // 
             // backButton
@@ -153,7 +153,7 @@
             // blockButt
             // 
             this.blockButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blockButt.Location = new System.Drawing.Point(186, 290);
+            this.blockButt.Location = new System.Drawing.Point(197, 290);
             this.blockButt.Margin = new System.Windows.Forms.Padding(2);
             this.blockButt.Name = "blockButt";
             this.blockButt.Size = new System.Drawing.Size(53, 23);
@@ -345,7 +345,7 @@
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(124, 290);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 23);
+            this.button1.Size = new System.Drawing.Size(68, 23);
             this.button1.TabIndex = 19;
             this.button1.Text = "Attack 2";
             this.button1.UseVisualStyleBackColor = true;
