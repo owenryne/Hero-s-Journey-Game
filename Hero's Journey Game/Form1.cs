@@ -71,8 +71,29 @@ namespace Hero_s_Journey_Game
         {
             updateBox.Items.Clear();
             updateBox.Items.Add("Pick your Class: "); //Not sure what classes we are going with yet. Waiting on next meeting.
+            warriorButton.Visible = true;
+            mageButton.Visible = true;
+            classesText.Visible = true;
             progressBar.Value = 0;
             lvlBox.Text = "0";
+        }
+
+        private void warriorButton_Click(object sender, EventArgs e)
+        {
+            Warrior warrior = new Warrior();
+            updateBox.Items.Add("You have chosen Warrior! " + warrior.Description);
+            warriorButton.Visible = false;
+            mageButton.Visible = false;
+            classesText.Visible = false;
+        }
+
+        private void mageButton_Click(object sender, EventArgs e)
+        {
+            Mage mage = new Mage();
+            updateBox.Items.Add("You have chosen Mage! " + mage.Description);
+            warriorButton.Visible = false;
+            mageButton.Visible = false;
+            classesText.Visible = false;
         }
 
 
