@@ -76,6 +76,7 @@ namespace Hero_s_Journey_Game
             classesText.Visible = true;
             progressBar.Value = 0;
             lvlBox.Text = "0";
+            charRegion.Text = "";
         }
 
         private void warriorButton_Click(object sender, EventArgs e)
@@ -85,6 +86,8 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+            dialogueButton.Visible = false;
+            startButton .Visible = false;
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -94,6 +97,8 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+            dialogueButton.Visible = false;
+            startButton.Visible = false;
         }
 
 
