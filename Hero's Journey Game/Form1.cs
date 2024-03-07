@@ -24,7 +24,7 @@ namespace Hero_s_Journey_Game
             "While exploring on the path, the player will encounter enemies in which you will need to beat to get past. \r",
             "To beat these enemies, there are buttons for two different attacks (related to your class choice), and a block. \r",
             "Enjoy exploring throughout the world of Hero's Journey!", 
-            "Click start again to begin your Journey!"
+            "Click Start begin your Journey!"
             
         };
 
@@ -65,6 +65,7 @@ namespace Hero_s_Journey_Game
 
             updateBox.Items.Add(introMessage);
             updateBox.Items.Add(introMessage2);
+            dialogueButton.Visible = false;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -99,6 +100,11 @@ namespace Hero_s_Journey_Game
             classesText.Visible = false;
             dialogueButton.Visible = false;
             startButton.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
 
