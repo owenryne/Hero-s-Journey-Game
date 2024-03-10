@@ -101,6 +101,8 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+            dialogueButton.Visible = false;
+            startButton.Visible = false;
             gameWorld = new GameWorld(10, 10, this);
         }
 
@@ -111,6 +113,8 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+            dialogueButton.Visible = false;
+            startButton .Visible = false;
             gameWorld = new GameWorld(10, 10, this);
         }
         private void forwardButt_Click(object sender, EventArgs e)
