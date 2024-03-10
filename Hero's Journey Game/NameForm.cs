@@ -29,9 +29,6 @@ namespace Hero_s_Journey_Game
             this.Close();
         }
 
-        private void NameForm_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

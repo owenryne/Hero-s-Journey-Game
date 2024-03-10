@@ -93,7 +93,6 @@ namespace Hero_s_Journey_Game {
                 characterY = newY;
 
                 Zone newZone = World[characterX, characterY];
-                form.ClearUpdateBox();
                 form.AddUpdate("You have entered the " + newZone.ZoneName + ".");
                 form.AddUpdate(newZone.ZoneDescription);
             }

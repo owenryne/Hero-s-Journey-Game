@@ -14,8 +14,9 @@ namespace Hero_s_Journey_Game
         public int Strength { get; set; }
         public int Speed { get; set; }
         public int Mana {  get; set; }
-        // ... other shared properties could go here
-
+        public string Weapon { get; set; }
+        public int weaponDamage { get; set; }
+        // ... other shared properties (strength, defense, mana, etc.)
 
         
     }
@@ -28,6 +29,9 @@ namespace Hero_s_Journey_Game
             Description = "A brave fighter who relies on their overpowering brawn.";
             Strength = 25;
             Mana = 0;
+            Speed = 0;
+            Weapon = "";
+            weaponDamage = 20; //subject to change
         }
         
     }

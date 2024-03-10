@@ -46,15 +46,15 @@
             // txtboxName
             // 
             this.txtboxName.Location = new System.Drawing.Point(46, 37);
-            this.txtboxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxName.Margin = new System.Windows.Forms.Padding(2);
             this.txtboxName.Name = "txtboxName";
             this.txtboxName.Size = new System.Drawing.Size(108, 20);
             this.txtboxName.TabIndex = 1;
             // 
             // btnName
             // 
-            this.btnName.Location = new System.Drawing.Point(46, 59);
-            this.btnName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnName.Location = new System.Drawing.Point(46, 61);
+            this.btnName.Margin = new System.Windows.Forms.Padding(2);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(56, 19);
             this.btnName.TabIndex = 2;
@@ -66,15 +66,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 143);
+            this.ClientSize = new System.Drawing.Size(414, 197);
             this.Controls.Add(this.btnName);
             this.Controls.Add(this.txtboxName);
             this.Controls.Add(this.EnterNameLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "NameForm";
             this.Text = "NameForm";
-            this.Load += new System.EventHandler(this.NameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

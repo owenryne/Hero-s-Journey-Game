@@ -24,9 +24,14 @@ namespace Hero_s_Journey_Game
             "While exploring on the path, the player will encounter enemies in which you will need to beat to get past. \r",
             "To beat these enemies, there are buttons for two different attacks (related to your class choice), and a block. \r",
             "Enjoy exploring throughout the world of Hero's Journey!", 
-            "Click start again to begin your Journey!"
+            "Click Start begin your Journey!"
             
         };
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Put your code here that should run when the form is loaded
+        }
 
         private GameWorld gameWorld;
 
@@ -41,6 +46,11 @@ namespace Hero_s_Journey_Game
             {
                 charNam.Text = name.CharacterName;
             }
+        }
+
+        public void AddUpdate(string update)
+        {
+            updateBox.Items.Add(update);
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -67,6 +77,7 @@ namespace Hero_s_Journey_Game
 
             updateBox.Items.Add(introMessage);
             updateBox.Items.Add(introMessage2);
+            dialogueButton.Visible = false;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -78,6 +89,7 @@ namespace Hero_s_Journey_Game
             classesText.Visible = true;
             progressBar.Value = 0;
             lvlBox.Text = "0";
+            charRegion.Text = "";
         }
 
 
@@ -89,8 +101,7 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
-
-            gameWorld = new GameWorld(10, 10, this); //Create the world after class selection
+            gameWorld = new GameWorld(10, 10, this);
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -100,42 +111,30 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
-
-            gameWorld = new GameWorld(10, 10, this); //Create the world after class selection
+            gameWorld = new GameWorld(10, 10, this);
         }
-
-        public void AddUpdate(string update) //Method to add updates to the listbox from the GameWorld class as it needs a public method in order to access the listbox
-        {
-            updateBox.Items.Add(update);
-        }
-
-        public void ClearUpdateBox() //Method to clear the listbox from the GameWorld class as it needs a public method in order to access the listbox
-        {
-            updateBox.Items.Clear();
-        }
-
         private void forwardButt_Click(object sender, EventArgs e)
         {
-            gameWorld.MoveCharacter(0, -1);
-            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
-        }
-
-        private void leftButton_Click(object sender, EventArgs e)
-        {
-            gameWorld.MoveCharacter(-1, 0);
-            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
-        }
-
-        private void rightButt_Click(object sender, EventArgs e)
-        {
-            gameWorld.MoveCharacter(1, 0);
-            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
+            gameWorld.MoveCharacter(0, -1); // Move up
+            playerCoords.Text = gameWorld.GetPlayerCoords();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            gameWorld.MoveCharacter(0, 1);
-            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
+            gameWorld.MoveCharacter(0, 1); // Move down
+            playerCoords.Text = gameWorld.GetPlayerCoords();
+        }
+
+        private void leftButton_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(-1, 0); // Move left
+            playerCoords.Text = gameWorld.GetPlayerCoords();
+        }
+
+        private void rightButt_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(1, 0); // Move right
+            playerCoords.Text = gameWorld.GetPlayerCoords();
         }
 
 
