@@ -8,12 +8,13 @@ namespace Hero_s_Journey_Game
 {
     internal class Character // Base character class
     {
+        //Sample properties for a character nothing concrete
         public string Description { get; set; }
         public int Health { get; set; }
         public int Strength { get; set; }
         public int Speed { get; set; }
         public int Mana {  get; set; }
-        // ... other shared properties (strength, defense, mana, etc.)
+        // ... other shared properties could go here
 
 
         

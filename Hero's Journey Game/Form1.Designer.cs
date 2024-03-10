@@ -75,12 +75,13 @@
             this.forwardButt.TabIndex = 0;
             this.forwardButt.Text = "Forward";
             this.forwardButt.UseVisualStyleBackColor = true;
+            this.forwardButt.Click += new System.EventHandler(this.forwardButt_Click);
             // 
             // playerCoords
             // 
             this.playerCoords.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerCoords.Location = new System.Drawing.Point(1074, 11);
-            this.playerCoords.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerCoords.Margin = new System.Windows.Forms.Padding(2);
             this.playerCoords.Name = "playerCoords";
             this.playerCoords.ReadOnly = true;
             this.playerCoords.Size = new System.Drawing.Size(100, 23);
@@ -96,7 +97,7 @@
             this.updateBox.FormattingEnabled = true;
             this.updateBox.ItemHeight = 15;
             this.updateBox.Location = new System.Drawing.Point(292, 81);
-            this.updateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateBox.Margin = new System.Windows.Forms.Padding(2);
             this.updateBox.Name = "updateBox";
             this.updateBox.Size = new System.Drawing.Size(612, 199);
             this.updateBox.TabIndex = 3;
@@ -110,6 +111,7 @@
             this.backButton.TabIndex = 4;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // rightButt
             // 
@@ -120,6 +122,7 @@
             this.rightButt.TabIndex = 5;
             this.rightButt.Text = "Right";
             this.rightButt.UseVisualStyleBackColor = true;
+            this.rightButt.Click += new System.EventHandler(this.rightButt_Click);
             // 
             // leftButton
             // 
@@ -130,12 +133,13 @@
             this.leftButton.TabIndex = 6;
             this.leftButton.Text = "Left";
             this.leftButton.UseVisualStyleBackColor = true;
+            this.leftButton.Click += new System.EventHandler(this.leftButton_Click);
             // 
             // combatText
             // 
             this.combatText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combatText.Location = new System.Drawing.Point(97, 262);
-            this.combatText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combatText.Margin = new System.Windows.Forms.Padding(2);
             this.combatText.Name = "combatText";
             this.combatText.ReadOnly = true;
             this.combatText.Size = new System.Drawing.Size(100, 23);
@@ -157,7 +161,7 @@
             // 
             this.blockButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blockButt.Location = new System.Drawing.Point(197, 290);
-            this.blockButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.blockButt.Margin = new System.Windows.Forms.Padding(2);
             this.blockButt.Name = "blockButt";
             this.blockButt.Size = new System.Drawing.Size(53, 23);
             this.blockButt.TabIndex = 9;
@@ -168,7 +172,7 @@
             // 
             this.okButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButt.Location = new System.Drawing.Point(927, 272);
-            this.okButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.okButt.Margin = new System.Windows.Forms.Padding(2);
             this.okButt.Name = "okButt";
             this.okButt.Size = new System.Drawing.Size(53, 23);
             this.okButt.TabIndex = 10;
@@ -179,7 +183,7 @@
             // 
             this.navText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navText.Location = new System.Drawing.Point(546, 359);
-            this.navText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.navText.Margin = new System.Windows.Forms.Padding(2);
             this.navText.Name = "navText";
             this.navText.ReadOnly = true;
             this.navText.Size = new System.Drawing.Size(120, 23);
@@ -266,7 +270,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(949, 248);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(120, 23);
@@ -278,7 +282,7 @@
             // 
             this.nextButton.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton.Location = new System.Drawing.Point(984, 272);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(53, 23);
             this.nextButton.TabIndex = 13;
@@ -290,7 +294,7 @@
             // 
             this.backButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButt.Location = new System.Drawing.Point(1041, 272);
-            this.backButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButt.Margin = new System.Windows.Forms.Padding(2);
             this.backButt.Name = "backButt";
             this.backButt.Size = new System.Drawing.Size(53, 23);
             this.backButt.TabIndex = 14;
@@ -301,7 +305,7 @@
             // 
             this.charInfo.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charInfo.Location = new System.Drawing.Point(78, 20);
-            this.charInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charInfo.Margin = new System.Windows.Forms.Padding(2);
             this.charInfo.Name = "charInfo";
             this.charInfo.ReadOnly = true;
             this.charInfo.Size = new System.Drawing.Size(128, 23);
@@ -313,7 +317,7 @@
             // 
             this.charNam.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charNam.Location = new System.Drawing.Point(78, 56);
-            this.charNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charNam.Margin = new System.Windows.Forms.Padding(2);
             this.charNam.Name = "charNam";
             this.charNam.ReadOnly = true;
             this.charNam.Size = new System.Drawing.Size(128, 23);
@@ -325,7 +329,7 @@
             // 
             this.charLevel.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charLevel.Location = new System.Drawing.Point(78, 93);
-            this.charLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charLevel.Margin = new System.Windows.Forms.Padding(2);
             this.charLevel.Name = "charLevel";
             this.charLevel.ReadOnly = true;
             this.charLevel.Size = new System.Drawing.Size(60, 23);
@@ -337,7 +341,7 @@
             // 
             this.lvlBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvlBox.Location = new System.Drawing.Point(146, 93);
-            this.lvlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvlBox.Margin = new System.Windows.Forms.Padding(2);
             this.lvlBox.Name = "lvlBox";
             this.lvlBox.ReadOnly = true;
             this.lvlBox.Size = new System.Drawing.Size(60, 23);
@@ -358,7 +362,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(78, 144);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(128, 23);
@@ -398,7 +402,7 @@
             // 
             this.clearBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBox.Location = new System.Drawing.Point(927, 300);
-            this.clearBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clearBox.Margin = new System.Windows.Forms.Padding(2);
             this.clearBox.Name = "clearBox";
             this.clearBox.Size = new System.Drawing.Size(167, 23);
             this.clearBox.TabIndex = 24;

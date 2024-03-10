@@ -28,6 +28,8 @@ namespace Hero_s_Journey_Game
             
         };
 
+        private GameWorld gameWorld;
+
         //Need to create an instance of the World in this form
         public Form1()
         {
@@ -78,6 +80,8 @@ namespace Hero_s_Journey_Game
             lvlBox.Text = "0";
         }
 
+
+
         private void warriorButton_Click(object sender, EventArgs e)
         {
             Warrior warrior = new Warrior();
@@ -85,6 +89,8 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+
+            gameWorld = new GameWorld(10, 10, this); //Create the world after class selection
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -94,6 +100,42 @@ namespace Hero_s_Journey_Game
             warriorButton.Visible = false;
             mageButton.Visible = false;
             classesText.Visible = false;
+
+            gameWorld = new GameWorld(10, 10, this); //Create the world after class selection
+        }
+
+        public void AddUpdate(string update) //Method to add updates to the listbox from the GameWorld class as it needs a public method in order to access the listbox
+        {
+            updateBox.Items.Add(update);
+        }
+
+        public void ClearUpdateBox() //Method to clear the listbox from the GameWorld class as it needs a public method in order to access the listbox
+        {
+            updateBox.Items.Clear();
+        }
+
+        private void forwardButt_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(0, -1);
+            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
+        }
+
+        private void leftButton_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(-1, 0);
+            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
+        }
+
+        private void rightButt_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(1, 0);
+            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            gameWorld.MoveCharacter(0, 1);
+            playerCoords.Text = gameWorld.GetPlayerCoords(); // Update playerCoords
         }
 
 
