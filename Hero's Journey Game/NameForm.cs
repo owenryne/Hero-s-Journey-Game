@@ -29,6 +29,21 @@ namespace Hero_s_Journey_Game
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            charLabel1.Visible = false;
+            charLabel2.Visible = false;
+            txtboxName.Visible = false;
+            btnName.Visible = false;
+            orLabel.Visible = false;
+            charLabel3.Visible = false;
+            createBtn.Visible = false;
+        }
+
+        private void NameForm_Load(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
