@@ -10,7 +10,7 @@ namespace Hero_s_Journey_Game {
 
         private Form1 form;
 
-        private Random random = new Random();
+        private Random randomEnemy = new Random(); //
 
         public GameWorld(int x, int y, Form1 form)
         {
@@ -128,13 +128,13 @@ namespace Hero_s_Journey_Game {
 
         private void InitializeWorld()
         {
-            Random rand = new Random();
+            Random randomZone = new Random();
             for (int i = 0; i < World.GetLength(0); i++)
             {
                 for (int j = 0; j < World.GetLength(1); j++)
                 {
                     // Randomly assigns a zone to each coordinate/positon in the array (Not sure if we want to do random assignment or not)
-                    switch (rand.Next(3))
+                    switch (randomZone.Next(3))
                     {
                         case 0:
                             World[i, j] = new Forest();
@@ -168,9 +168,9 @@ namespace Hero_s_Journey_Game {
 
                 if (newZone.Enemies.Count > 0)
                 {
-                    if (random.NextDouble() < newZone.EncounterRate)
+                    if (randomEnemy.NextDouble() < newZone.EncounterRate)
                     {
-                        Enemy enemy = newZone.Enemies[random.Next(newZone.Enemies.Count)];
+                        Enemy enemy = newZone.Enemies[randomEnemy.Next(newZone.Enemies.Count)];
                         form.AddUpdate("You have encountered a " + enemy.EnemyName + "!");
                     }
                 }
