@@ -141,6 +141,11 @@ namespace Hero_s_Journey_Game
             playerCoords.Text = gameWorld.GetPlayerCoords();
         }
 
+        public void ClearUpdateBox() //Clears the update box when called (Call it when changing zones)
+        {
+            updateBox.Items.Clear();
+        }
+
 
         //Test comment to see if i can push changes
 

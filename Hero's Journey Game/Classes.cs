@@ -15,7 +15,7 @@ namespace Hero_s_Journey_Game
         public int Speed { get; set; }
         public int Mana {  get; set; }
         public string Weapon { get; set; }
-        public int weaponDamage { get; set; }
+        public int WeaponDamage { get; set; }
         // ... other shared properties (strength, defense, mana, etc.)
 
         
@@ -31,7 +31,7 @@ namespace Hero_s_Journey_Game
             Mana = 0;
             Speed = 0;
             Weapon = "";
-            weaponDamage = 20; //subject to change
+            WeaponDamage = 20; //subject to change
         }
         
     }

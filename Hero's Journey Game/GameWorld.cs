@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Hero_s_Journey_Game {
     public class GameWorld
@@ -8,6 +9,8 @@ namespace Hero_s_Journey_Game {
         private int characterY;
 
         private Form1 form;
+
+        private Random random = new Random();
 
         public GameWorld(int x, int y, Form1 form)
         {
@@ -24,10 +27,25 @@ namespace Hero_s_Journey_Game {
             return $"({characterX}, {characterY}) in {currentZone.ZoneName}";
         }
 
+        public class Enemy // Base enemy class
+        {
+            public string EnemyName { get; set; }
+            public string EnemyDescription { get; set; }
+            public int EnemyHealth { get; set; }
+            public int EnemyDamage { get; set; }
+        }
+
         public class Zone // Base zone class
         {
             public string ZoneName { get; set; }
             public string ZoneDescription { get; set; }
+            public List<Enemy> Enemies { get; set; } // List of enemies that can be found in the zone
+            public double EncounterRate { get; set; } // Chance of encountering an enemy in the zone
+
+            public Zone() //Initializes the list of enemies so exceptions are not thrown for zones without enemies
+            {
+                Enemies = new List<Enemy>();
+            }
         }
         //(Need to add more zones)
         public class Forest : Zone
@@ -36,6 +54,31 @@ namespace Hero_s_Journey_Game {
             {
                 ZoneName = "Forest"; // Need to add zone-specific properties and methods (e.g. enemies, etc.)
                 ZoneDescription = "A dense forest with towering trees that block out most sunlight.";
+                EncounterRate = 0.5;
+                Enemies = new List<Enemy>
+                {
+                    new Enemy
+                    {
+                        EnemyName = "Goblin",
+                        EnemyDescription = "A small, green creature with a large nose, pointy ears, and a mischevious grin.",
+                        EnemyHealth = 10,
+                        EnemyDamage = 5
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Wolf",
+                        EnemyDescription = "A large, grey wolf with sharp teeth, a menacing growl, and a deep hunger in it's eyes.",
+                        EnemyHealth = 15,
+                        EnemyDamage = 7
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Bear",
+                        EnemyDescription = "A massive, grizzly bear with sharp claws and a deafening roar.",
+                        EnemyHealth = 20,
+                        EnemyDamage = 10
+                    }
+                };
             }
         }
 
@@ -45,6 +88,32 @@ namespace Hero_s_Journey_Game {
             {
                 ZoneName = "Plain";
                 ZoneDescription = "A vast open plain with little to no cover.";
+                EncounterRate = 0.25;
+
+                Enemies = new List<Enemy>
+                {
+                    new Enemy
+                    {
+                        EnemyName = "Bandit",
+                        EnemyDescription = "A criminal outlaw armed with a knife and who's face is obscured by a mask.",
+                        EnemyHealth = 10,
+                        EnemyDamage = 5
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Giant Rat",
+                        EnemyDescription = "A large rat with sharp teeth and a long tail.",
+                        EnemyHealth = 5,
+                        EnemyDamage = 10
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Boar",
+                        EnemyDescription = "A large angry boar with two large tusks",
+                        EnemyHealth = 20,
+                        EnemyDamage = 10
+                    }
+                };
             }
         }
 
@@ -93,13 +162,25 @@ namespace Hero_s_Journey_Game {
                 characterY = newY;
 
                 Zone newZone = World[characterX, characterY];
+                form.ClearUpdateBox();
                 form.AddUpdate("You have entered the " + newZone.ZoneName + ".");
                 form.AddUpdate(newZone.ZoneDescription);
+
+                if (newZone.Enemies.Count > 0)
+                {
+                    if (random.NextDouble() < newZone.EncounterRate)
+                    {
+                        Enemy enemy = newZone.Enemies[random.Next(newZone.Enemies.Count)];
+                        form.AddUpdate("You have encountered a " + enemy.EnemyName + "!");
+                    }
+                }
             }
             else
             {
                 form.AddUpdate("Your travel is impeded you cannot continue in this direction!"); //Handles if the character tries to move out of bounds
             }
         }
+
+
     }
 }
