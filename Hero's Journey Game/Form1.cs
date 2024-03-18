@@ -45,6 +45,7 @@ namespace Hero_s_Journey_Game
             if (name.ShowDialog() == DialogResult.OK ) 
             {
                 charNam.Text = name.CharacterName;
+                charGender.Text = name.Gender;
             }
             forwardButt.Enabled = false; //Disables the movement buttons until a class is chosen
             backButton.Enabled = false;

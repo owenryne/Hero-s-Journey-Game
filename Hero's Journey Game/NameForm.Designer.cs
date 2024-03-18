@@ -36,9 +36,9 @@
             this.charLabel3 = new System.Windows.Forms.Label();
             this.createBtn = new System.Windows.Forms.Button();
             this.genderLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.femaleBtn = new System.Windows.Forms.Button();
+            this.maleBtn = new System.Windows.Forms.Button();
+            this.preferBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
             this.txtBoxName2 = new System.Windows.Forms.TextBox();
             this.raceLabel = new System.Windows.Forms.Label();
@@ -48,7 +48,8 @@
             this.speedBtn = new System.Windows.Forms.Button();
             this.manaBtn = new System.Windows.Forms.Button();
             this.defBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.verifyLabel = new System.Windows.Forms.Label();
+            this.btnName2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // charLabel2
@@ -71,7 +72,7 @@
             // 
             // btnName
             // 
-            this.btnName.Location = new System.Drawing.Point(738, 362);
+            this.btnName.Location = new System.Drawing.Point(47, 88);
             this.btnName.Margin = new System.Windows.Forms.Padding(2);
             this.btnName.Name = "btnName";
             this.btnName.Size = new System.Drawing.Size(56, 19);
@@ -93,7 +94,7 @@
             // 
             this.orLabel.AutoSize = true;
             this.orLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orLabel.Location = new System.Drawing.Point(248, 64);
+            this.orLabel.Location = new System.Drawing.Point(230, 62);
             this.orLabel.Name = "orLabel";
             this.orLabel.Size = new System.Drawing.Size(43, 25);
             this.orLabel.TabIndex = 4;
@@ -116,7 +117,7 @@
             this.createBtn.TabIndex = 6;
             this.createBtn.Text = "Create Character";
             this.createBtn.UseVisualStyleBackColor = true;
-            this.createBtn.Click += new System.EventHandler(this.button1_Click);
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // genderLabel
             // 
@@ -127,33 +128,35 @@
             this.genderLabel.TabIndex = 7;
             this.genderLabel.Text = "Gender:";
             // 
-            // button1
+            // femaleBtn
             // 
-            this.button1.Location = new System.Drawing.Point(744, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Female";
-            this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.femaleBtn.Location = new System.Drawing.Point(744, 17);
+            this.femaleBtn.Name = "femaleBtn";
+            this.femaleBtn.Size = new System.Drawing.Size(50, 23);
+            this.femaleBtn.TabIndex = 8;
+            this.femaleBtn.Text = "Female";
+            this.femaleBtn.UseVisualStyleBackColor = true;
+            this.femaleBtn.Click += new System.EventHandler(this.femaleBtn_Click);
             // 
-            // button2
+            // maleBtn
             // 
-            this.button2.Location = new System.Drawing.Point(820, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Male";
-            this.button2.UseVisualStyleBackColor = true;
+            this.maleBtn.Location = new System.Drawing.Point(820, 17);
+            this.maleBtn.Name = "maleBtn";
+            this.maleBtn.Size = new System.Drawing.Size(50, 23);
+            this.maleBtn.TabIndex = 9;
+            this.maleBtn.Text = "Male";
+            this.maleBtn.UseVisualStyleBackColor = false;
+            this.maleBtn.Click += new System.EventHandler(this.maleBtn_Click);
             // 
-            // button3
+            // preferBtn
             // 
-            this.button3.Location = new System.Drawing.Point(744, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Prefer not to say";
-            this.button3.UseVisualStyleBackColor = true;
+            this.preferBtn.Location = new System.Drawing.Point(744, 46);
+            this.preferBtn.Name = "preferBtn";
+            this.preferBtn.Size = new System.Drawing.Size(132, 23);
+            this.preferBtn.TabIndex = 10;
+            this.preferBtn.Text = "Prefer not to say";
+            this.preferBtn.UseVisualStyleBackColor = true;
+            this.preferBtn.Click += new System.EventHandler(this.preferBtn_Click);
             // 
             // nameLabel
             // 
@@ -206,6 +209,7 @@
             this.strengthBtn.TabIndex = 16;
             this.strengthBtn.Text = "+1 Strength";
             this.strengthBtn.UseVisualStyleBackColor = true;
+            this.strengthBtn.Click += new System.EventHandler(this.strengthBtn_Click);
             // 
             // speedBtn
             // 
@@ -215,6 +219,7 @@
             this.speedBtn.TabIndex = 17;
             this.speedBtn.Text = "+1 Speed";
             this.speedBtn.UseVisualStyleBackColor = true;
+            this.speedBtn.Click += new System.EventHandler(this.speedBtn_Click);
             // 
             // manaBtn
             // 
@@ -224,6 +229,7 @@
             this.manaBtn.TabIndex = 18;
             this.manaBtn.Text = "+1 Mana";
             this.manaBtn.UseVisualStyleBackColor = true;
+            this.manaBtn.Click += new System.EventHandler(this.manaBtn_Click);
             // 
             // defBtn
             // 
@@ -233,22 +239,35 @@
             this.defBtn.TabIndex = 19;
             this.defBtn.Text = "+1 Defence";
             this.defBtn.UseVisualStyleBackColor = true;
+            this.defBtn.Click += new System.EventHandler(this.defBtn_Click);
             // 
-            // label1
+            // verifyLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(693, 316);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "**Verify your answers before you click submit!**";
+            this.verifyLabel.AutoSize = true;
+            this.verifyLabel.Location = new System.Drawing.Point(693, 316);
+            this.verifyLabel.Name = "verifyLabel";
+            this.verifyLabel.Size = new System.Drawing.Size(228, 13);
+            this.verifyLabel.TabIndex = 20;
+            this.verifyLabel.Text = "**Verify your answers before you click submit!**";
+            // 
+            // btnName2
+            // 
+            this.btnName2.Location = new System.Drawing.Point(744, 382);
+            this.btnName2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnName2.Name = "btnName2";
+            this.btnName2.Size = new System.Drawing.Size(56, 19);
+            this.btnName2.TabIndex = 21;
+            this.btnName2.Text = "Submit";
+            this.btnName2.UseVisualStyleBackColor = true;
+            this.btnName2.Click += new System.EventHandler(this.btnName2_Click);
             // 
             // NameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1214, 613);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnName2);
+            this.Controls.Add(this.verifyLabel);
             this.Controls.Add(this.defBtn);
             this.Controls.Add(this.manaBtn);
             this.Controls.Add(this.speedBtn);
@@ -258,9 +277,9 @@
             this.Controls.Add(this.raceLabel);
             this.Controls.Add(this.txtBoxName2);
             this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.preferBtn);
+            this.Controls.Add(this.maleBtn);
+            this.Controls.Add(this.femaleBtn);
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.charLabel3);
@@ -289,9 +308,9 @@
         private System.Windows.Forms.Label charLabel3;
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Label genderLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button femaleBtn;
+        private System.Windows.Forms.Button maleBtn;
+        private System.Windows.Forms.Button preferBtn;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox txtBoxName2;
         private System.Windows.Forms.Label raceLabel;
@@ -301,6 +320,7 @@
         private System.Windows.Forms.Button speedBtn;
         private System.Windows.Forms.Button manaBtn;
         private System.Windows.Forms.Button defBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label verifyLabel;
+        private System.Windows.Forms.Button btnName2;
     }
 }

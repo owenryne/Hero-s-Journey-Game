@@ -64,6 +64,7 @@
             this.classesText = new System.Windows.Forms.TextBox();
             this.warriorButton = new System.Windows.Forms.Button();
             this.mageButton = new System.Windows.Forms.Button();
+            this.charGender = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -330,7 +331,7 @@
             // charLevel
             // 
             this.charLevel.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charLevel.Location = new System.Drawing.Point(82, 93);
+            this.charLevel.Location = new System.Drawing.Point(82, 121);
             this.charLevel.Margin = new System.Windows.Forms.Padding(2);
             this.charLevel.Name = "charLevel";
             this.charLevel.ReadOnly = true;
@@ -342,7 +343,7 @@
             // lvlBox
             // 
             this.lvlBox.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlBox.Location = new System.Drawing.Point(146, 93);
+            this.lvlBox.Location = new System.Drawing.Point(150, 121);
             this.lvlBox.Margin = new System.Windows.Forms.Padding(2);
             this.lvlBox.Name = "lvlBox";
             this.lvlBox.ReadOnly = true;
@@ -359,7 +360,6 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Attack 2";
             this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // charRegion
             // 
@@ -383,7 +383,7 @@
             // progressBar
             // 
             this.progressBar.ForeColor = System.Drawing.Color.Honeydew;
-            this.progressBar.Location = new System.Drawing.Point(82, 121);
+            this.progressBar.Location = new System.Drawing.Point(82, 149);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(128, 10);
             this.progressBar.TabIndex = 22;
@@ -454,12 +454,25 @@
             this.mageButton.Visible = false;
             this.mageButton.Click += new System.EventHandler(this.mageButton_Click);
             // 
+            // charGender
+            // 
+            this.charGender.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charGender.Location = new System.Drawing.Point(82, 94);
+            this.charGender.Margin = new System.Windows.Forms.Padding(2);
+            this.charGender.Name = "charGender";
+            this.charGender.ReadOnly = true;
+            this.charGender.Size = new System.Drawing.Size(128, 23);
+            this.charGender.TabIndex = 30;
+            this.charGender.Text = "Character Gender";
+            this.charGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
+            this.Controls.Add(this.charGender);
             this.Controls.Add(this.mageButton);
             this.Controls.Add(this.warriorButton);
             this.Controls.Add(this.classesText);
@@ -534,6 +547,7 @@
         private System.Windows.Forms.TextBox classesText;
         private System.Windows.Forms.Button warriorButton;
         private System.Windows.Forms.Button mageButton;
+        private System.Windows.Forms.TextBox charGender;
     }
 }
 
