@@ -175,6 +175,9 @@ namespace Hero_s_Journey_Game
 
         private void attackButt_Click(object sender, EventArgs e)
         {
+            if (currentEnemy == null) return; // Prevents exceptions if the enemy is null  (The button is supposed to be disabled after combat but sometimes I got exceptions by clicking to fast through combat encounters)
+
+
             // Player's turn
             currentEnemy.EnemyHealth -= gameWorld.player.WeaponDamage;
             AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.WeaponDamage} damage!");
@@ -182,6 +185,22 @@ namespace Hero_s_Journey_Game
             if (currentEnemy.EnemyHealth <= 0)
             {
                 AddUpdate($"{currentEnemy.EnemyName} has been defeated!");
+                gameWorld.player.EXP += currentEnemy.EnemyEXP; // Gain EXP for defeating the enemy
+                AddUpdate($"You gained {currentEnemy.EnemyEXP} EXP!");
+                if (gameWorld.player.EXP >= 100)
+                {
+                    gameWorld.player.EXP = 0;
+                    gameWorld.player.Health += 10; // Gain 10 health for leveling up
+                    gameWorld.player.WeaponDamage += 5; // Gain 5 damage for leveling up
+                    progressBar.Value = 0; // Reset the progress bar
+                    progressBar.Maximum += 50; // Increase the needed EXP for the next level
+                    AddUpdate($"You have leveled up! You gained 10 health and 5 damage!");
+                    lvlBox.Text = (Convert.ToInt32(lvlBox.Text) + 1).ToString(); // Update the level box
+                }
+                else
+                {
+                    progressBar.Value = gameWorld.player.EXP; // Update the progress bar with the player's current EXP
+                }
                 currentEnemy = null; // Reset the enemy
                 attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
                 blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
@@ -196,7 +215,7 @@ namespace Hero_s_Journey_Game
 
             if (gameWorld.player.Health <= 0)
             {
-                AddUpdate($"{gameWorld.player.GetType().Name} has been defeated...");
+                AddUpdate($"You have been defeated...");
                 currentEnemy = null; // Reset the enemy
             }
         }
@@ -205,6 +224,7 @@ namespace Hero_s_Journey_Game
 
         private void blockButt_Click(object sender, EventArgs e)
         {
+            if (currentEnemy == null) return; // Prevents exceptions if the enemy is null  (The button is supposed to be disabled after combat but sometimes I got exceptions by clicking to fast through combat encounters)
 
             AddUpdate($"{gameWorld.player.GetType().Name} is preparing to block the next attack!");
 

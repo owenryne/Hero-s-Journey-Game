@@ -349,6 +349,7 @@
             this.lvlBox.ReadOnly = true;
             this.lvlBox.Size = new System.Drawing.Size(60, 23);
             this.lvlBox.TabIndex = 18;
+            this.lvlBox.Text = "0";
             this.lvlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1

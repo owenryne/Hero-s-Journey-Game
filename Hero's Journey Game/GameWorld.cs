@@ -34,6 +34,8 @@ namespace Hero_s_Journey_Game {
             public string EnemyDescription { get; set; }
             public int EnemyHealth { get; set; }
             public int EnemyDamage { get; set; }
+
+            public int EnemyEXP { get; set; } // The amount of EXP the player gains for defeating the enemy
         }
 
         public class Zone // Base zone class
@@ -63,21 +65,24 @@ namespace Hero_s_Journey_Game {
                         EnemyName = "Goblin",
                         EnemyDescription = "A small, green creature with a large nose, pointy ears, and a mischevious grin.",
                         EnemyHealth = 40,
-                        EnemyDamage = 5
+                        EnemyDamage = 5,
+                        EnemyEXP = 15
                     },
                     new Enemy
                     {
                         EnemyName = "Wolf",
                         EnemyDescription = "A large, grey wolf with sharp teeth, a menacing growl, and a deep hunger in it's eyes.",
                         EnemyHealth = 50,
-                        EnemyDamage = 7
+                        EnemyDamage = 7,
+                        EnemyEXP = 20
                     },
                     new Enemy
                     {
                         EnemyName = "Bear",
                         EnemyDescription = "A massive, grizzly bear with sharp claws and a deafening roar.",
                         EnemyHealth = 75,
-                        EnemyDamage = 10
+                        EnemyDamage = 10,
+                        EnemyEXP = 25
                     }
                 };
             }
@@ -89,7 +94,7 @@ namespace Hero_s_Journey_Game {
             {
                 ZoneName = "Plain";
                 ZoneDescription = "A vast open plain with little to no cover.";
-                EncounterRate = 0.25;
+                EncounterRate = 0.40;
 
                 Enemies = new List<Enemy>
                 {
@@ -98,21 +103,24 @@ namespace Hero_s_Journey_Game {
                         EnemyName = "Bandit",
                         EnemyDescription = "A criminal outlaw armed with a knife and who's face is obscured by a mask.",
                         EnemyHealth = 30,
-                        EnemyDamage = 5
+                        EnemyDamage = 5,
+                        EnemyEXP = 15
                     },
                     new Enemy
                     {
                         EnemyName = "Giant Rat",
                         EnemyDescription = "A large rat with sharp teeth and a long tail.",
                         EnemyHealth = 25,
-                        EnemyDamage = 10
+                        EnemyDamage = 10,
+                        EnemyEXP = 10
                     },
                     new Enemy
                     {
                         EnemyName = "Boar",
                         EnemyDescription = "A large angry boar with two large tusks",
                         EnemyHealth = 50,
-                        EnemyDamage = 10
+                        EnemyDamage = 10,
+                        EnemyEXP = 20
                     }
                 };
             }
