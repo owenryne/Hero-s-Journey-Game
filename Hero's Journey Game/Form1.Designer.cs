@@ -156,6 +156,7 @@
             this.attackButt.TabIndex = 8;
             this.attackButt.Text = "Attack 1";
             this.attackButt.UseVisualStyleBackColor = true;
+            this.attackButt.Click += new System.EventHandler(this.attackButt_Click);
             // 
             // blockButt
             // 
@@ -167,6 +168,7 @@
             this.blockButt.TabIndex = 9;
             this.blockButt.Text = "Block";
             this.blockButt.UseVisualStyleBackColor = true;
+            this.blockButt.Click += new System.EventHandler(this.blockButt_Click);
             // 
             // okButt
             // 
@@ -357,11 +359,12 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Attack 2";
             this.button1.UseVisualStyleBackColor = true;
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // charRegion
             // 
             this.charRegion.Location = new System.Drawing.Point(11, 11);
-            this.charRegion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charRegion.Margin = new System.Windows.Forms.Padding(2);
             this.charRegion.Name = "charRegion";
             this.charRegion.Size = new System.Drawing.Size(76, 20);
             this.charRegion.TabIndex = 29;

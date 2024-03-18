@@ -10,7 +10,8 @@ namespace Hero_s_Journey_Game {
 
         private Form1 form;
 
-        private Random randomEnemy = new Random(); //
+        private Random randomEnemy = new Random(); // Random object to determine if an enemy is encountered
+        public Character player; // The player's character
 
         public GameWorld(int x, int y, Form1 form)
         {
@@ -61,21 +62,21 @@ namespace Hero_s_Journey_Game {
                     {
                         EnemyName = "Goblin",
                         EnemyDescription = "A small, green creature with a large nose, pointy ears, and a mischevious grin.",
-                        EnemyHealth = 10,
+                        EnemyHealth = 40,
                         EnemyDamage = 5
                     },
                     new Enemy
                     {
                         EnemyName = "Wolf",
                         EnemyDescription = "A large, grey wolf with sharp teeth, a menacing growl, and a deep hunger in it's eyes.",
-                        EnemyHealth = 15,
+                        EnemyHealth = 50,
                         EnemyDamage = 7
                     },
                     new Enemy
                     {
                         EnemyName = "Bear",
                         EnemyDescription = "A massive, grizzly bear with sharp claws and a deafening roar.",
-                        EnemyHealth = 20,
+                        EnemyHealth = 75,
                         EnemyDamage = 10
                     }
                 };
@@ -96,21 +97,21 @@ namespace Hero_s_Journey_Game {
                     {
                         EnemyName = "Bandit",
                         EnemyDescription = "A criminal outlaw armed with a knife and who's face is obscured by a mask.",
-                        EnemyHealth = 10,
+                        EnemyHealth = 30,
                         EnemyDamage = 5
                     },
                     new Enemy
                     {
                         EnemyName = "Giant Rat",
                         EnemyDescription = "A large rat with sharp teeth and a long tail.",
-                        EnemyHealth = 5,
+                        EnemyHealth = 25,
                         EnemyDamage = 10
                     },
                     new Enemy
                     {
                         EnemyName = "Boar",
                         EnemyDescription = "A large angry boar with two large tusks",
-                        EnemyHealth = 20,
+                        EnemyHealth = 50,
                         EnemyDamage = 10
                     }
                 };
@@ -166,12 +167,14 @@ namespace Hero_s_Journey_Game {
                 form.AddUpdate("You have entered the " + newZone.ZoneName + ".");
                 form.AddUpdate(newZone.ZoneDescription);
 
-                if (newZone.Enemies.Count > 0)
+                if (newZone.Enemies.Count > 0) // If there are enemies in the zone, there is a chance to encounter one
                 {
-                    if (randomEnemy.NextDouble() < newZone.EncounterRate)
+                    if (randomEnemy.NextDouble() < newZone.EncounterRate) // Randomly determines if an enemy is encountered
                     {
-                        Enemy enemy = newZone.Enemies[randomEnemy.Next(newZone.Enemies.Count)];
-                        form.AddUpdate("You have encountered a " + enemy.EnemyName + "!");
+                        Enemy enemy = newZone.Enemies[randomEnemy.Next(newZone.Enemies.Count)]; // Randomly selects an enemy from the list of enemies in the zone
+                        form.AddUpdate("You have encountered a " + enemy.EnemyName + "!"); 
+
+                        form.Battle(player,enemy); // Starts a battle with the enemy
                     }
                 }
             }

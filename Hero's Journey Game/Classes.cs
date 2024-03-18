@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hero_s_Journey_Game
 {
-    internal class Character // Base character class
+    public class Character // Base character class
     {
         //Sample properties for a character nothing concrete
         public string Description { get; set; }
@@ -16,6 +16,7 @@ namespace Hero_s_Journey_Game
         public int Mana {  get; set; }
         public string Weapon { get; set; }
         public int WeaponDamage { get; set; }
+
         // ... other shared properties (strength, defense, mana, etc.)
 
         
@@ -27,6 +28,7 @@ namespace Hero_s_Journey_Game
         public Warrior()
         {
             Description = "A brave fighter who relies on their overpowering brawn.";
+            Health = 100;
             Strength = 25;
             Mana = 0;
             Speed = 0;
@@ -42,8 +44,11 @@ namespace Hero_s_Journey_Game
         public Mage()
         {
             Description =  "A magic user who relies on their sharp mind.";
+            Health = 80;
             Strength = 5;
             Mana = 50;
+            Weapon = "Staff";
+            WeaponDamage = 10; //subject to change
         }
     }
 }

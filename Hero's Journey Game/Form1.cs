@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static Hero_s_Journey_Game.GameWorld;
 
 namespace Hero_s_Journey_Game
 {
@@ -34,8 +35,7 @@ namespace Hero_s_Journey_Game
         }
 
         private GameWorld gameWorld;
-
-        //Need to create an instance of the World in this form
+        private Enemy currentEnemy;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +46,12 @@ namespace Hero_s_Journey_Game
             {
                 charNam.Text = name.CharacterName;
             }
+            forwardButt.Enabled = false; //Disables the movement buttons until a class is chosen
+            backButton.Enabled = false;
+            leftButton.Enabled = false;
+            rightButt.Enabled = false;
+            attackButt.Enabled = false; //Disables the attack button until a battle is initiated
+            blockButt.Enabled = false; //Disables the block button until a battle is initiated
         }
 
         public void AddUpdate(string update)
@@ -104,6 +110,11 @@ namespace Hero_s_Journey_Game
             dialogueButton.Visible = false;
             startButton.Visible = false;
             gameWorld = new GameWorld(10, 10, this);
+            forwardButt.Enabled = true; //Enables the movement buttons after a class is chosen
+            backButton.Enabled = true;
+            leftButton.Enabled = true;
+            rightButt.Enabled = true;
+            gameWorld.player = warrior;
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -116,6 +127,11 @@ namespace Hero_s_Journey_Game
             dialogueButton.Visible = false;
             startButton .Visible = false;
             gameWorld = new GameWorld(10, 10, this);
+            forwardButt.Enabled = true;
+            backButton.Enabled = true;
+            leftButton.Enabled = true;
+            rightButt.Enabled = true;
+            gameWorld.player = mage;
         }
         private void forwardButt_Click(object sender, EventArgs e)
         {
@@ -147,7 +163,59 @@ namespace Hero_s_Journey_Game
         }
 
 
-        //Test comment to see if i can push changes
+        public void Battle(Character character, Enemy enemy)
+        {
+            // Initialize the battle
+            AddUpdate($"A battle has started between {character.GetType().Name} and {enemy.EnemyName}!");
+            currentEnemy = enemy;
+            attackButt.Enabled = true; // Enables the attack button when a battle is initiated
+            blockButt.Enabled = true; // Enables the block button when a battle is initiated
+        }
 
+        private void attackButt_Click(object sender, EventArgs e)
+        {
+            // Player's turn
+            currentEnemy.EnemyHealth -= gameWorld.player.WeaponDamage;
+            AddUpdate($"{gameWorld.player.GetType().Name} attacks {currentEnemy.EnemyName} for {gameWorld.player.WeaponDamage} damage!");
+
+            if (currentEnemy.EnemyHealth <= 0)
+            {
+                AddUpdate($"{currentEnemy.EnemyName} has been defeated!");
+                currentEnemy = null; // Reset the enemy
+                attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
+                blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
+                return;
+            }
+
+            // Enemy's turn
+
+            gameWorld.player.Health -= currentEnemy.EnemyDamage;
+            AddUpdate($"{currentEnemy.EnemyName} attacks {gameWorld.player.GetType().Name} for {currentEnemy.EnemyDamage} damage!");
+
+
+            if (gameWorld.player.Health <= 0)
+            {
+                AddUpdate($"{gameWorld.player.GetType().Name} has been defeated...");
+                currentEnemy = null; // Reset the enemy
+            }
+        }
+
+
+
+        private void blockButt_Click(object sender, EventArgs e)
+        {
+
+            AddUpdate($"{gameWorld.player.GetType().Name} is preparing to block the next attack!");
+
+            gameWorld.player.Health -= currentEnemy.EnemyDamage / 2; // Take half damage when blocking
+            AddUpdate($"{gameWorld.player.GetType().Name} blocks and takes {currentEnemy.EnemyDamage / 2} damage!");
+
+
+            if (gameWorld.player.Health <= 0)
+            {
+                AddUpdate($"{gameWorld.player.GetType().Name} has been defeated...");
+                currentEnemy = null; // Reset the enemy
+            }
+        }
     }
 }
