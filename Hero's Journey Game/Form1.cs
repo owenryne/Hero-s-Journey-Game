@@ -167,7 +167,7 @@ namespace Hero_s_Journey_Game
         public void Battle(Character character, Enemy enemy)
         {
             // Initialize the battle
-            AddUpdate($"A battle has started between {character.GetType().Name} and {enemy.EnemyName}!");
+            AddUpdate($"A battle has started between you and a {enemy.EnemyName}!");
             currentEnemy = enemy;
             attackButt.Enabled = true; // Enables the attack button when a battle is initiated
             blockButt.Enabled = true; // Enables the block button when a battle is initiated
@@ -177,7 +177,7 @@ namespace Hero_s_Journey_Game
         {
             // Player's turn
             currentEnemy.EnemyHealth -= gameWorld.player.WeaponDamage;
-            AddUpdate($"{gameWorld.player.GetType().Name} attacks {currentEnemy.EnemyName} for {gameWorld.player.WeaponDamage} damage!");
+            AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.WeaponDamage} damage!");
 
             if (currentEnemy.EnemyHealth <= 0)
             {
@@ -191,7 +191,7 @@ namespace Hero_s_Journey_Game
             // Enemy's turn
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage;
-            AddUpdate($"{currentEnemy.EnemyName} attacks {gameWorld.player.GetType().Name} for {currentEnemy.EnemyDamage} damage!");
+            AddUpdate($"{currentEnemy.EnemyName} attacks you for {currentEnemy.EnemyDamage} damage!");
 
 
             if (gameWorld.player.Health <= 0)
