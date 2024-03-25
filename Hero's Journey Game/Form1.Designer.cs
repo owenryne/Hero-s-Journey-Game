@@ -65,6 +65,7 @@
             this.warriorButton = new System.Windows.Forms.Button();
             this.mageButton = new System.Windows.Forms.Button();
             this.charGender = new System.Windows.Forms.TextBox();
+            this.playerHealth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -467,12 +468,23 @@
             this.charGender.Text = "Character Gender";
             this.charGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // playerHealth
+            // 
+            this.playerHealth.AutoSize = true;
+            this.playerHealth.BackColor = System.Drawing.SystemColors.Control;
+            this.playerHealth.Location = new System.Drawing.Point(957, 76);
+            this.playerHealth.Name = "playerHealth";
+            this.playerHealth.Size = new System.Drawing.Size(62, 13);
+            this.playerHealth.TabIndex = 31;
+            this.playerHealth.Text = "Health: 100";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
+            this.Controls.Add(this.playerHealth);
             this.Controls.Add(this.charGender);
             this.Controls.Add(this.mageButton);
             this.Controls.Add(this.warriorButton);
@@ -549,6 +561,7 @@
         private System.Windows.Forms.Button warriorButton;
         private System.Windows.Forms.Button mageButton;
         private System.Windows.Forms.TextBox charGender;
+        private System.Windows.Forms.Label playerHealth;
     }
 }
 

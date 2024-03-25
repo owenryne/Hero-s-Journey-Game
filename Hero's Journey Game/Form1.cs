@@ -60,6 +60,12 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add(update);
         }
 
+        public void UpdateHealth(int health)
+        {
+            gameWorld.player.Health = health;
+            playerHealth.Text = $"Health: {health}";
+        }
+
         private void nextButton_Click(object sender, EventArgs e)
         {
             if (currentIndex < gameExplain.Length)
@@ -211,6 +217,7 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage;
             AddUpdate($"{currentEnemy.EnemyName} attacks you for {currentEnemy.EnemyDamage} damage!");
+            UpdateHealth(gameWorld.player.Health);
 
 
             if (gameWorld.player.Health <= 0)
@@ -230,6 +237,7 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage / 2; // Take half damage when blocking
             AddUpdate($"{gameWorld.player.GetType().Name} blocks and takes {currentEnemy.EnemyDamage / 2} damage!");
+            UpdateHealth(gameWorld.player.Health);
 
 
             if (gameWorld.player.Health <= 0)

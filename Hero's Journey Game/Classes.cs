@@ -44,7 +44,7 @@ namespace Hero_s_Journey_Game
         public Mage()
         {
             Description =  "A magic user who relies on their sharp mind.";
-            Health = 80;
+            Health = 100;
             Strength = 5;
             Mana = 50;
             Weapon = "Staff";

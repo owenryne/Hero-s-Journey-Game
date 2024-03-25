@@ -175,6 +175,14 @@ namespace Hero_s_Journey_Game {
                 form.AddUpdate("You have entered the " + newZone.ZoneName + ".");
                 form.AddUpdate(newZone.ZoneDescription);
 
+                if (newZone is Town) // If the zone is a town, the player will heal to full health
+                {
+                    player.Health = 100;
+                    form.AddUpdate("You find respite in town and have recovered your health.");
+                    form.UpdateHealth(player.Health);
+                }
+
+
                 if (newZone.Enemies.Count > 0) // If there are enemies in the zone, there is a chance to encounter one
                 {
                     if (randomEnemy.NextDouble() < newZone.EncounterRate) // Randomly determines if an enemy is encountered
