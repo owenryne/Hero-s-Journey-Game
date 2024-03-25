@@ -185,8 +185,8 @@ namespace Hero_s_Journey_Game
 
 
             // Player's turn
-            currentEnemy.EnemyHealth -= gameWorld.player.WeaponDamage;
-            AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.WeaponDamage} damage!");
+            currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage;
+            AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.Weapon.WeaponDamage} damage!");
 
             if (currentEnemy.EnemyHealth <= 0)
             {
@@ -197,7 +197,7 @@ namespace Hero_s_Journey_Game
                 {
                     gameWorld.player.EXP = 0;
                     gameWorld.player.Health += 10; // Gain 10 health for leveling up
-                    gameWorld.player.WeaponDamage += 5; // Gain 5 damage for leveling up
+                    gameWorld.player.Weapon.WeaponDamage += 5; // Gain 5 damage for leveling up // I want to tie in stregth to this cause it doesnt make a lot of sense to lvl up weapon damage rather than a charachter attribute (mabye make stregnth work as a multiplier for weapon damage and then do something similar for magic and dex depending on the class)
                     progressBar.Value = 0; // Reset the progress bar
                     progressBar.Maximum += 50; // Increase the needed EXP for the next level
                     AddUpdate($"You have leveled up! You gained 10 health and 5 damage!");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace Hero_s_Journey_Game {
     public class GameWorld
@@ -201,5 +202,17 @@ namespace Hero_s_Journey_Game {
         }
 
 
+        public class Item // Base item class
+        {
+            public string ItemName { get; set; }
+            public string ItemDescription { get; set; }
+            public int ItemValue { get; set; }
+            //other shared properties
+        }
+
+        public class Weapon : Item // Weapons derived from Item
+        {
+            public int WeaponDamage { get; set; }
+        }
     }
 }
