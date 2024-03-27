@@ -137,7 +137,8 @@ namespace Hero_s_Journey_Game
             playerHealth.Text = charNam.Text;
 
             //Set player HP to 100
-            playerHealthBar.Value = 100;
+            playerHealthBar.Value = warrior.Health;
+            playerHealthBar.Maximum = warrior.MaxHealth;
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -161,8 +162,9 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Visible = true;
             playerHealth.Text = charNam.Text;
 
-            //Set player HP to 100
-            playerHealthBar.Value = 100;
+            //Set player HP to 80
+            playerHealthBar.Value = mage.Health;
+            playerHealthBar.Maximum = mage.MaxHealth;
         }
         private void forwardButt_Click(object sender, EventArgs e)
         {
@@ -205,8 +207,9 @@ namespace Hero_s_Journey_Game
             enemyHealth.Visible = true;
             enemyHealth.Text = enemy.EnemyName;
             enemyHealthBar.Visible = true;
-            enemyHealthBar.Maximum = enemy.EnemyHealth; // Set the maximum value of the enemy's health bar to the enemy's max HP
-            enemyHealthBar.Value = enemy.EnemyHealth; // Set the enemy's health bar to the enemy's current HP
+            enemy.EnemyHealth = enemy.EnemyMaxHealth; // Reset the enemy's health to max HP at the start of the battle to prevent the glitch where you encountered a 0 hp enemy
+            enemyHealthBar.Maximum = enemy.EnemyMaxHealth; // Set the maximum value of the enemy's health bar to the enemy's max HP
+            enemyHealthBar.Value = enemy.EnemyMaxHealth; // Set the enemy's health bar to max hp at the start of the battle to prevent the weird glitch where the bar is empty at the start of the battle
 
         }
 
@@ -232,6 +235,7 @@ namespace Hero_s_Journey_Game
                     gameWorld.player.EXP = 0;
                     gameWorld.player.Health += 10; // Gain 10 health for leveling up
                     gameWorld.player.MaxHealth += 10; // Increase the player's max health
+                    playerHealthBar.Maximum = gameWorld.player.MaxHealth; // Update the player's health bar with the new max HP
                     gameWorld.player.Weapon.WeaponDamage += 5; // Gain 5 damage for leveling up // I want to tie in stregth to this cause it doesnt make a lot of sense to lvl up weapon damage rather than a charachter attribute (mabye make stregnth work as a multiplier for weapon damage and then do something similar for magic and dex depending on the class)
                     progressBar.Value = 0; // Reset the progress bar
                     progressBar.Maximum += 50; // Increase the needed EXP for the next level
