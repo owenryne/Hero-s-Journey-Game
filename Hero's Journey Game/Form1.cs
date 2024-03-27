@@ -32,6 +32,12 @@ namespace Hero_s_Journey_Game
         private void Form1_Load(object sender, EventArgs e)
         {
             // Put your code here that should run when the form is loaded
+            // Make battle health updates invisible on game launch
+            enemyHealthBar.Visible = false;
+            enemyHealth.Visible = false;
+
+            playerHealth.Visible = false;
+            playerHealthBar.Visible = false;
         }
 
         private GameWorld gameWorld;
@@ -63,8 +69,7 @@ namespace Hero_s_Journey_Game
         public void UpdateHealth(int health)
         {
             gameWorld.player.Health = health;
-            playerHealth.Text = $"Health: {health}";
-            healthBar.Value = health; // Update the health bar with player's current HP
+            playerHealthBar.Value = health; // Update the health bar with player's current HP
             //have to set healthbar to 100 when class is chosen.
         }
 
@@ -124,6 +129,14 @@ namespace Hero_s_Journey_Game
             leftButton.Enabled = true;
             rightButt.Enabled = true;
             gameWorld.player = warrior;
+            
+            //Set player HP to visible
+            playerHealth.Visible = true;
+            playerHealthBar.Visible = true;
+            playerHealth.Text = charNam.Text;
+
+            //Set player HP to 100
+            playerHealthBar.Value = 100;
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -141,6 +154,14 @@ namespace Hero_s_Journey_Game
             leftButton.Enabled = true;
             rightButt.Enabled = true;
             gameWorld.player = mage;
+
+            //Set player HP to visible
+            playerHealth.Visible = true;
+            playerHealthBar.Visible = true;
+            playerHealth.Text = charNam.Text;
+
+            //Set player HP to 100
+            playerHealthBar.Value = 100;
         }
         private void forwardButt_Click(object sender, EventArgs e)
         {
@@ -174,11 +195,17 @@ namespace Hero_s_Journey_Game
 
         public void Battle(Character character, Enemy enemy)
         {
+            
             // Initialize the battle
             AddUpdate($"A battle has started between you and a {enemy.EnemyName}!");
             currentEnemy = enemy;
             attackButt.Enabled = true; // Enables the attack button when a battle is initiated
             blockButt.Enabled = true; // Enables the block button when a battle is initiated
+            enemyHealth.Visible = true;
+            enemyHealth.Text = enemy.EnemyName;
+            enemyHealthBar.Visible = true;
+            enemyHealthBar.Value = 100;
+
         }
 
         private void attackButt_Click(object sender, EventArgs e)
@@ -189,6 +216,8 @@ namespace Hero_s_Journey_Game
             // Player's turn
             currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage;
             AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.Weapon.WeaponDamage} damage!");
+            enemyHealthBar.Value = currentEnemy.EnemyHealth;
+            
 
             if (currentEnemy.EnemyHealth <= 0)
             {

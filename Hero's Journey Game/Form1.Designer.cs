@@ -66,7 +66,9 @@
             this.mageButton = new System.Windows.Forms.Button();
             this.charGender = new System.Windows.Forms.TextBox();
             this.playerHealth = new System.Windows.Forms.Label();
-            this.healthBar = new System.Windows.Forms.ProgressBar();
+            this.playerHealthBar = new System.Windows.Forms.ProgressBar();
+            this.enemyHealth = new System.Windows.Forms.Label();
+            this.enemyHealthBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -473,19 +475,37 @@
             // 
             this.playerHealth.AutoSize = true;
             this.playerHealth.BackColor = System.Drawing.SystemColors.Control;
-            this.playerHealth.Location = new System.Drawing.Point(957, 76);
+            this.playerHealth.Location = new System.Drawing.Point(754, 290);
             this.playerHealth.Name = "playerHealth";
-            this.playerHealth.Size = new System.Drawing.Size(62, 13);
+            this.playerHealth.Size = new System.Drawing.Size(67, 13);
             this.playerHealth.TabIndex = 31;
-            this.playerHealth.Text = "Health: 100";
+            this.playerHealth.Text = "Player Name";
             // 
-            // healthBar
+            // playerHealthBar
             // 
-            this.healthBar.ForeColor = System.Drawing.Color.Honeydew;
-            this.healthBar.Location = new System.Drawing.Point(957, 94);
-            this.healthBar.Name = "healthBar";
-            this.healthBar.Size = new System.Drawing.Size(120, 10);
-            this.healthBar.TabIndex = 32;
+            this.playerHealthBar.ForeColor = System.Drawing.Color.Honeydew;
+            this.playerHealthBar.Location = new System.Drawing.Point(728, 306);
+            this.playerHealthBar.Name = "playerHealthBar";
+            this.playerHealthBar.Size = new System.Drawing.Size(120, 10);
+            this.playerHealthBar.TabIndex = 32;
+            // 
+            // enemyHealth
+            // 
+            this.enemyHealth.AutoSize = true;
+            this.enemyHealth.BackColor = System.Drawing.SystemColors.Control;
+            this.enemyHealth.Location = new System.Drawing.Point(388, 295);
+            this.enemyHealth.Name = "enemyHealth";
+            this.enemyHealth.Size = new System.Drawing.Size(70, 13);
+            this.enemyHealth.TabIndex = 33;
+            this.enemyHealth.Text = "Enemy Name";
+            // 
+            // enemyHealthBar
+            // 
+            this.enemyHealthBar.ForeColor = System.Drawing.Color.Honeydew;
+            this.enemyHealthBar.Location = new System.Drawing.Point(360, 311);
+            this.enemyHealthBar.Name = "enemyHealthBar";
+            this.enemyHealthBar.Size = new System.Drawing.Size(120, 10);
+            this.enemyHealthBar.TabIndex = 34;
             // 
             // Form1
             // 
@@ -493,7 +513,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
-            this.Controls.Add(this.healthBar);
+            this.Controls.Add(this.enemyHealthBar);
+            this.Controls.Add(this.enemyHealth);
+            this.Controls.Add(this.playerHealthBar);
             this.Controls.Add(this.playerHealth);
             this.Controls.Add(this.charGender);
             this.Controls.Add(this.mageButton);
@@ -572,7 +594,9 @@
         private System.Windows.Forms.Button mageButton;
         private System.Windows.Forms.TextBox charGender;
         private System.Windows.Forms.Label playerHealth;
-        private System.Windows.Forms.ProgressBar healthBar;
+        private System.Windows.Forms.ProgressBar playerHealthBar;
+        private System.Windows.Forms.Label enemyHealth;
+        private System.Windows.Forms.ProgressBar enemyHealthBar;
     }
 }
 
