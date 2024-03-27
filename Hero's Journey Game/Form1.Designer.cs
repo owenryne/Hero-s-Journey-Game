@@ -66,6 +66,7 @@
             this.mageButton = new System.Windows.Forms.Button();
             this.charGender = new System.Windows.Forms.TextBox();
             this.playerHealth = new System.Windows.Forms.Label();
+            this.healthBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -478,12 +479,21 @@
             this.playerHealth.TabIndex = 31;
             this.playerHealth.Text = "Health: 100";
             // 
+            // healthBar
+            // 
+            this.healthBar.ForeColor = System.Drawing.Color.Honeydew;
+            this.healthBar.Location = new System.Drawing.Point(957, 94);
+            this.healthBar.Name = "healthBar";
+            this.healthBar.Size = new System.Drawing.Size(120, 10);
+            this.healthBar.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
+            this.Controls.Add(this.healthBar);
             this.Controls.Add(this.playerHealth);
             this.Controls.Add(this.charGender);
             this.Controls.Add(this.mageButton);
@@ -562,6 +572,7 @@
         private System.Windows.Forms.Button mageButton;
         private System.Windows.Forms.TextBox charGender;
         private System.Windows.Forms.Label playerHealth;
+        private System.Windows.Forms.ProgressBar healthBar;
     }
 }
 

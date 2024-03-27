@@ -64,6 +64,8 @@ namespace Hero_s_Journey_Game
         {
             gameWorld.player.Health = health;
             playerHealth.Text = $"Health: {health}";
+            healthBar.Value = health; // Update the health bar with player's current HP
+            //have to set healthbar to 100 when class is chosen.
         }
 
         private void nextButton_Click(object sender, EventArgs e)
