@@ -11,6 +11,7 @@ namespace Hero_s_Journey_Game
         //Sample properties for a character nothing concrete
         public string Description { get; set; }
         public int Health { get; set; }
+        public int MaxHealth { get; set; }
         public int Strength { get; set; }
         public int Speed { get; set; }
         public int Mana {  get; set; }
@@ -30,6 +31,7 @@ namespace Hero_s_Journey_Game
         {
             Description = "A brave fighter who relies on their overpowering brawn.";
             Health = 100;
+            MaxHealth = 100;
             Strength = 25;
             Mana = 0;
 
@@ -51,6 +53,7 @@ namespace Hero_s_Journey_Game
         {
             Description =  "A magic user who relies on their sharp mind.";
             Health = 100;
+            MaxHealth = 100;
             Strength = 5;
             Mana = 50;
             
@@ -71,6 +74,7 @@ namespace Hero_s_Journey_Game
         {
             Description = "A stealthy character who relies on their agility and cunning.";
             Health = 100;
+            MaxHealth = 100;
             Strength = 10;
             Dexterity = 25;
             Mana = 0;

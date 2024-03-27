@@ -71,6 +71,7 @@ namespace Hero_s_Journey_Game
             gameWorld.player.Health = health;
             playerHealthBar.Value = health; // Update the health bar with player's current HP
             //have to set healthbar to 100 when class is chosen.
+            playerHealthBar.Maximum = gameWorld.player.MaxHealth; // Set the maximum value of the player's health bar to the player's max HP
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -204,7 +205,8 @@ namespace Hero_s_Journey_Game
             enemyHealth.Visible = true;
             enemyHealth.Text = enemy.EnemyName;
             enemyHealthBar.Visible = true;
-            enemyHealthBar.Value = 100;
+            enemyHealthBar.Maximum = enemy.EnemyHealth; // Set the maximum value of the enemy's health bar to the enemy's max HP
+            enemyHealthBar.Value = enemy.EnemyHealth; // Set the enemy's health bar to the enemy's current HP
 
         }
 
@@ -216,8 +218,9 @@ namespace Hero_s_Journey_Game
             // Player's turn
             currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage;
             AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.Weapon.WeaponDamage} damage!");
-            enemyHealthBar.Value = currentEnemy.EnemyHealth;
-            
+
+            if (currentEnemy.EnemyHealth < 0) { currentEnemy.EnemyHealth = 0; } // Prevents the enemy health bar from going below 0
+            else { enemyHealthBar.Value = currentEnemy.EnemyHealth; }
 
             if (currentEnemy.EnemyHealth <= 0)
             {
@@ -228,6 +231,7 @@ namespace Hero_s_Journey_Game
                 {
                     gameWorld.player.EXP = 0;
                     gameWorld.player.Health += 10; // Gain 10 health for leveling up
+                    gameWorld.player.MaxHealth += 10; // Increase the player's max health
                     gameWorld.player.Weapon.WeaponDamage += 5; // Gain 5 damage for leveling up // I want to tie in stregth to this cause it doesnt make a lot of sense to lvl up weapon damage rather than a charachter attribute (mabye make stregnth work as a multiplier for weapon damage and then do something similar for magic and dex depending on the class)
                     progressBar.Value = 0; // Reset the progress bar
                     progressBar.Maximum += 50; // Increase the needed EXP for the next level
@@ -239,6 +243,8 @@ namespace Hero_s_Journey_Game
                     progressBar.Value = gameWorld.player.EXP; // Update the progress bar with the player's current EXP
                 }
                 currentEnemy = null; // Reset the enemy
+                enemyHealth.Visible = false;
+                enemyHealthBar.Visible = false;
                 attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
                 blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
                 return;
@@ -255,6 +261,10 @@ namespace Hero_s_Journey_Game
             {
                 AddUpdate($"You have been defeated...");
                 currentEnemy = null; // Reset the enemy
+                enemyHealth.Visible = false;
+                enemyHealthBar.Visible = false;
+                attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
+                blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
             }
         }
 
@@ -275,6 +285,10 @@ namespace Hero_s_Journey_Game
             {
                 AddUpdate($"{gameWorld.player.GetType().Name} has been defeated...");
                 currentEnemy = null; // Reset the enemy
+                enemyHealth.Visible = false;
+                enemyHealthBar.Visible = false;
+                attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
+                blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
             }
         }
     }
