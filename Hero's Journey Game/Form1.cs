@@ -388,6 +388,9 @@ namespace Hero_s_Journey_Game
             charType.Text = "Gnome";
             updateBox.Items.Add("You've Chosen Gnome!");
             //Add stat modifiers
+            gameWorld.player.Strength -= 3;
+            gameWorld.player.Dexterity -= 2;
+            gameWorld.player.Mana += 5;
 
 
             humanBtn.Visible = false;
@@ -402,6 +405,8 @@ namespace Hero_s_Journey_Game
             charType.Text = "Elf";
             updateBox.Items.Add("You've Chosen Elf!");
             //Add stat modifiers
+            gameWorld.player.Dexterity += 5;
+            gameWorld.player.Strength -= 2;
 
 
             humanBtn.Visible = false;
@@ -416,6 +421,9 @@ namespace Hero_s_Journey_Game
             charType.Text = "Orc";
             updateBox.Items.Add("You've Chosen Orc!");
             //Add stat modifiers
+            gameWorld.player.Strength += 5;
+            gameWorld.player.Dexterity -= 3;
+            gameWorld.player.Mana -= 5;
 
 
             humanBtn.Visible = false;
