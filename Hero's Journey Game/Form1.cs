@@ -256,7 +256,7 @@ namespace Hero_s_Journey_Game
 
 
             // Player's turn
-            currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage;
+            currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage + (gameWorld.player.Strength * gameWorld.player.Weapon.StrMod);
             AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.Weapon.WeaponDamage} damage!");
 
             if (currentEnemy.EnemyHealth < 0) { currentEnemy.EnemyHealth = 0; } // Prevents the enemy health bar from going below 0

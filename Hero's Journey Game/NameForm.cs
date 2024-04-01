@@ -125,8 +125,6 @@ namespace Hero_s_Journey_Game
         {
             //Once DB is set up, set to strength +1, or WeaponDamage +1
             manaBtn.Visible = false;
-            Weapon.WeaponDamage = 0;
-            Weapon.WeaponDamage = Weapon.WeaponDamage + 5;
 
         }
 
@@ -135,8 +133,6 @@ namespace Hero_s_Journey_Game
         {
             //Once DB is set up, set to Mana +1
             strengthBtn.Visible = false;
-            Weapon.WeaponDamage = 0;
-            Weapon.WeaponDamage = Weapon.WeaponDamage + 5;
         }
 
     }
