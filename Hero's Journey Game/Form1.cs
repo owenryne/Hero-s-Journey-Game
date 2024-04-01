@@ -166,6 +166,33 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Value = mage.Health;
             playerHealthBar.Maximum = mage.MaxHealth;
         }
+
+        private void rougeButton_Click(object sender, EventArgs e)
+        {
+            Rogue rogue = new Rogue();
+            updateBox.Items.Add("You have chosen Mage! " + rogue.Description);
+            warriorButton.Visible = false;
+            mageButton.Visible = false;
+            classesText.Visible = false;
+            dialogueButton.Visible = false;
+            startButton.Visible = false;
+            gameWorld = new GameWorld(10, 10, this);
+            forwardButt.Enabled = true;
+            backButton.Enabled = true;
+            leftButton.Enabled = true;
+            rightButt.Enabled = true;
+            gameWorld.player = rogue;
+
+            //Set player HP to visible
+            playerHealth.Visible = true;
+            playerHealthBar.Visible = true;
+            playerHealth.Text = charNam.Text;
+
+            //Set player HP to 80
+            playerHealthBar.Value = rogue.Health;
+            playerHealthBar.Maximum = rogue.MaxHealth;
+        }
+
         private void forwardButt_Click(object sender, EventArgs e)
         {
             gameWorld.MoveCharacter(0, -1); // Move up
@@ -295,5 +322,7 @@ namespace Hero_s_Journey_Game
                 blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
             }
         }
+
+
     }
 }
