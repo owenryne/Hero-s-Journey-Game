@@ -226,13 +226,14 @@ namespace Hero_s_Journey_Game {
                 form.ClearUpdateBox();
                 form.AddUpdate("You have entered the " + newZone.ZoneName + ".");
                 form.AddUpdate(newZone.ZoneDescription);
+                form.ClearEnemyInfo();
 
                 if (newZone is Town) // If the zone is a town, the player will heal to full health
                 {
                     player.Health = player.MaxHealth;
                     form.AddUpdate("You find respite in town and have recovered your health.");
                     form.UpdateHealth(player.Health);
-                    form.EnterTown();
+
                 }
 
 
