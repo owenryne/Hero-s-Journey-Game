@@ -15,7 +15,8 @@ namespace Hero_s_Journey_Game
 
         public string CharacterName { get; private set; }
         public string Gender {  get; private set; }
-        public string Race { get; private set; }  
+        public string Race { get; private set; }
+        public GameWorld.Weapon Weapon { get; set; }
 
         public NameForm()
         {
@@ -63,8 +64,6 @@ namespace Hero_s_Journey_Game
             modLabel.Visible = false;
             strengthBtn.Visible = false;
             manaBtn.Visible = false;
-            speedBtn.Visible = false;
-            defBtn.Visible = false;
 
             //last label and submit btn
             btnName2.Visible = false;
@@ -104,8 +103,6 @@ namespace Hero_s_Journey_Game
             modLabel.Visible = true;
             strengthBtn.Visible = true;
             manaBtn.Visible = true;
-            speedBtn.Visible = true;
-            defBtn.Visible = true;
 
             //last label and submit btn
             btnName2.Visible = true;
@@ -139,33 +136,18 @@ namespace Hero_s_Journey_Game
         private void strengthBtn_Click(object sender, EventArgs e)
         {
             //Once DB is set up, set to strength +1, or WeaponDamage +1
-            speedBtn.Visible = false;
+
             manaBtn.Visible = false;
-            defBtn.Visible = false;
+
         }
 
-        private void speedBtn_Click(object sender, EventArgs e)
-        {
-            //Once DB is set up, set to speed +1
-            strengthBtn.Visible = false;
-            manaBtn.Visible = false;
-            defBtn.Visible = false;
-        }
 
         private void manaBtn_Click(object sender, EventArgs e)
         {
             //Once DB is set up, set to Mana +1
             strengthBtn.Visible = false;
-            speedBtn.Visible = false;
-            defBtn.Visible = false;
+
         }
 
-        private void defBtn_Click(object sender, EventArgs e)
-        {
-            //Once DB is set up, set to Defence +1
-            strengthBtn.Visible = false;
-            speedBtn.Visible = false;
-            manaBtn.Visible = false;
-        }
     }
 }
