@@ -48,13 +48,8 @@ namespace Hero_s_Journey_Game
             txtBoxName2.Visible = false;
 
             //Race Elements
-            raceLabel.Visible = false;
-            txtboxRace.Visible = false;
 
             //Character Mod Btns
-            modLabel.Visible = false;
-            strengthBtn.Visible = false;
-            manaBtn.Visible = false;
 
             //last label and submit btn
             btnName2.Visible = false;
@@ -81,14 +76,6 @@ namespace Hero_s_Journey_Game
             nameLabel.Visible = true;
             txtBoxName2.Visible = true;
 
-            //Race Elements
-            raceLabel.Visible = true;
-            txtboxRace.Visible = true;
-
-            //Character Mod Btns
-            modLabel.Visible = true;
-            strengthBtn.Visible = true;
-            manaBtn.Visible = true;
 
             //last label and submit btn
             btnName2.Visible = true;
@@ -117,16 +104,14 @@ namespace Hero_s_Journey_Game
 
         private void strengthBtn_Click(object sender, EventArgs e)
         {
-            //Once DB is set up, set to strength +1, or WeaponDamage +1
-            manaBtn.Visible = false;
+            
 
         }
 
 
         private void manaBtn_Click(object sender, EventArgs e)
         {
-            //Once DB is set up, set to Mana +1
-            strengthBtn.Visible = false;
+            
         }
 
     }
