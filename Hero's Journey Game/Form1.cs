@@ -74,6 +74,12 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Maximum = gameWorld.player.MaxHealth; // Set the maximum value of the player's health bar to the player's max HP
         }
 
+        public void EnterTown()
+        {
+            enemyHealthBar.Visible = false;
+            enemyHealth.Visible = false;
+        }
+
         private void nextButton_Click(object sender, EventArgs e)
         {
             if (currentIndex < gameExplain.Length)
@@ -107,6 +113,7 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add("Pick your Class: "); //Not sure what classes we are going with yet. Waiting on next meeting.
             warriorButton.Visible = true;
             mageButton.Visible = true;
+            rougeButton.Visible = true;
             classesText.Visible = true;
             progressBar.Value = 0;
             lvlBox.Text = "0";
@@ -121,6 +128,7 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add("You have chosen Warrior! " + warrior.Description);
             warriorButton.Visible = false;
             mageButton.Visible = false;
+            rougeButton.Visible = false;
             classesText.Visible = false;
             dialogueButton.Visible = false;
             startButton.Visible = false;
@@ -147,6 +155,7 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add("You have chosen Mage! " + mage.Description);
             warriorButton.Visible = false;
             mageButton.Visible = false;
+            rougeButton.Visible = false;
             classesText.Visible = false;
             dialogueButton.Visible = false;
             startButton .Visible = false;
@@ -173,6 +182,7 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add("You have chosen Mage! " + rogue.Description);
             warriorButton.Visible = false;
             mageButton.Visible = false;
+            rougeButton.Visible = false;
             classesText.Visible = false;
             dialogueButton.Visible = false;
             startButton.Visible = false;
@@ -188,7 +198,7 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Visible = true;
             playerHealth.Text = charNam.Text;
 
-            //Set player HP to 80
+            //Set player HP to 100
             playerHealthBar.Value = rogue.Health;
             playerHealthBar.Maximum = rogue.MaxHealth;
         }

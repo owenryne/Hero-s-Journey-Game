@@ -21,7 +21,10 @@ namespace Hero_s_Journey_Game
         public int EXP { get; set; }
         // ... other shared properties (strength, defense, mana, etc.)
 
-        
+        public double StrengthModifier { get; set; } // Could use this to let the weapon scale with the player's strength
+        public double DexterityModifier { get; set; }
+
+
     }
 
     internal class Warrior : Character
