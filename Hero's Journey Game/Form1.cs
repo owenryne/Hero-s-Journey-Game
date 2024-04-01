@@ -74,7 +74,7 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Maximum = gameWorld.player.MaxHealth; // Set the maximum value of the player's health bar to the player's max HP
         }
 
-        public void ClearEnemyInfo()
+        public void ClearEnemyInfo() //Clears the enemy info when entering a new zone (needed in case player runs away from an encounter)
         {
             enemyHealthBar.Visible = false;
             enemyHealth.Visible = false;
