@@ -134,6 +134,47 @@ namespace Hero_s_Journey_Game {
             }
         }
 
+        public class Cave : Zone
+        {
+            public Cave()
+            {
+                ZoneName = "Cave";
+                ZoneDescription = "A dark, damp cave with a musty smell.";
+                EncounterRate = 0.60;
+
+                Enemies = new List<Enemy>
+                {
+                    new Enemy
+                    {
+                        EnemyName = "Bat",
+                        EnemyDescription = "A small, flying creature with sharp teeth.",
+                        EnemyHealth = 20,
+                        EnemyMaxHealth = 20,
+                        EnemyDamage = 5,
+                        EnemyEXP = 10
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Spider",
+                        EnemyDescription = "A large, hairy spider with eight large legs and a venomous fangs.",
+                        EnemyHealth = 30,
+                        EnemyMaxHealth = 30,
+                        EnemyDamage = 7,
+                        EnemyEXP = 15
+                    },
+                    new Enemy
+                    {
+                        EnemyName = "Orc",
+                        EnemyDescription = "A giant hulking orc wielding a massive club.",
+                        EnemyHealth = 80,
+                        EnemyMaxHealth = 80,
+                        EnemyDamage = 20,
+                        EnemyEXP = 20
+                    }
+                };
+            }
+        }
+
         public class Town : Zone
         {
             public Town()
@@ -151,7 +192,7 @@ namespace Hero_s_Journey_Game {
                 for (int j = 0; j < World.GetLength(1); j++)
                 {
                     // Randomly assigns a zone to each coordinate/positon in the array (Not sure if we want to do random assignment or not)
-                    switch (randomZone.Next(3))
+                    switch (randomZone.Next(4))
                     {
                         case 0:
                             World[i, j] = new Forest();
@@ -161,6 +202,9 @@ namespace Hero_s_Journey_Game {
                             break;
                         case 2:
                             World[i, j] = new Town();
+                            break;
+                        case 3:
+                            World[i, j] = new Cave();
                             break;
                     }
                 }

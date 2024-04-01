@@ -188,7 +188,7 @@ namespace Hero_s_Journey_Game
             playerHealthBar.Visible = true;
             playerHealth.Text = charNam.Text;
 
-            //Set player HP to 80
+            //Set player HP to 100
             playerHealthBar.Value = rogue.Health;
             playerHealthBar.Maximum = rogue.MaxHealth;
         }
