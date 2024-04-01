@@ -424,5 +424,10 @@ namespace Hero_s_Journey_Game
             elfBtn.Visible = false;
             raceText.Visible = false;
         }
+
+        private void updateBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
