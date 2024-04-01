@@ -38,6 +38,11 @@ namespace Hero_s_Journey_Game
 
             playerHealth.Visible = false;
             playerHealthBar.Visible = false;
+            humanBtn.Visible = false;
+            gnomeBtn.Visible = false;
+            orcBtn.Visible = false;
+            elfBtn.Visible = false;
+            raceText.Visible = false;
         }
 
         private GameWorld gameWorld;
@@ -51,7 +56,7 @@ namespace Hero_s_Journey_Game
             if (name.ShowDialog() == DialogResult.OK ) 
             {
                 charNam.Text = name.CharacterName;
-                charGender.Text = name.Gender;
+                charType.Text = name.Gender;
             }
             forwardButt.Enabled = false; //Disables the movement buttons until a class is chosen
             backButton.Enabled = false;
@@ -59,6 +64,7 @@ namespace Hero_s_Journey_Game
             rightButt.Enabled = false;
             attackButt.Enabled = false; //Disables the attack button until a battle is initiated
             blockButt.Enabled = false; //Disables the block button until a battle is initiated
+         
         }
 
         public void AddUpdate(string update)
@@ -109,6 +115,7 @@ namespace Hero_s_Journey_Game
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            //Add Chracter Class
             updateBox.Items.Clear();
             updateBox.Items.Add("Pick your Class: "); //Not sure what classes we are going with yet. Waiting on next meeting.
             warriorButton.Visible = true;
@@ -118,6 +125,8 @@ namespace Hero_s_Journey_Game
             progressBar.Value = 0;
             lvlBox.Text = "0";
             charRegion.Text = "";
+
+           
         }
 
 
@@ -147,6 +156,17 @@ namespace Hero_s_Journey_Game
             //Set player HP to 100
             playerHealthBar.Value = warrior.Health;
             playerHealthBar.Maximum = warrior.MaxHealth;
+
+            //Set player strength to +5
+
+            //Add character Race
+            updateBox.Items.Add("Pick your character's race: ");
+            raceText.Visible = true;
+            humanBtn.Visible = true;
+            elfBtn.Visible = true;
+            orcBtn.Visible = true;
+            gnomeBtn.Visible = true;
+
         }
 
         private void mageButton_Click(object sender, EventArgs e)
@@ -174,12 +194,20 @@ namespace Hero_s_Journey_Game
             //Set player HP to 80
             playerHealthBar.Value = mage.Health;
             playerHealthBar.Maximum = mage.MaxHealth;
+
+            //Add char race
+            updateBox.Items.Add("Pick your character's race: ");
+            raceText.Visible = true;
+            humanBtn.Visible = true;
+            elfBtn.Visible = true;
+            orcBtn.Visible = true;
+            gnomeBtn.Visible = true;
         }
 
         private void rougeButton_Click(object sender, EventArgs e)
         {
             Rogue rogue = new Rogue();
-            updateBox.Items.Add("You have chosen Mage! " + rogue.Description);
+            updateBox.Items.Add("You have chosen Rogue! " + rogue.Description);
             warriorButton.Visible = false;
             mageButton.Visible = false;
             rougeButton.Visible = false;
@@ -201,6 +229,14 @@ namespace Hero_s_Journey_Game
             //Set player HP to 100
             playerHealthBar.Value = rogue.Health;
             playerHealthBar.Maximum = rogue.MaxHealth;
+
+            //Add char race
+            updateBox.Items.Add("Pick your character's race: ");
+            raceText.Visible = true;
+            humanBtn.Visible = true;
+            elfBtn.Visible = true;
+            orcBtn.Visible = true;
+            gnomeBtn.Visible = true;
         }
 
         private void forwardButt_Click(object sender, EventArgs e)
@@ -256,7 +292,7 @@ namespace Hero_s_Journey_Game
 
 
             // Player's turn
-            currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage + (gameWorld.player.Strength * gameWorld.player.Weapon.StrMod);
+            currentEnemy.EnemyHealth -= gameWorld.player.Weapon.WeaponDamage + Convert.ToInt32((gameWorld.player.Strength * gameWorld.player.Weapon.StrengthModifier));
             AddUpdate($"You attack the {currentEnemy.EnemyName} for {gameWorld.player.Weapon.WeaponDamage} damage!");
 
             if (currentEnemy.EnemyHealth < 0) { currentEnemy.EnemyHealth = 0; } // Prevents the enemy health bar from going below 0
@@ -333,6 +369,60 @@ namespace Hero_s_Journey_Game
             }
         }
 
+        private void humanBtn_Click(object sender, EventArgs e)
+        {
+            charType.Text = "Human";
+            updateBox.Items.Add("You've Chosen Human!");
+            //Add stat modifiers
 
+
+            humanBtn.Visible = false;
+            gnomeBtn.Visible = false;
+            orcBtn.Visible = false;
+            elfBtn.Visible = false;
+            raceText.Visible = false;
+        }
+
+        private void gnomeBtn_Click(object sender, EventArgs e)
+        {
+            charType.Text = "Gnome";
+            updateBox.Items.Add("You've Chosen Gnome!");
+            //Add stat modifiers
+
+
+            humanBtn.Visible = false;
+            gnomeBtn.Visible = false;
+            orcBtn.Visible = false;
+            elfBtn.Visible = false;
+            raceText.Visible = false;
+        }
+
+        private void elfBtn_Click(object sender, EventArgs e)
+        {
+            charType.Text = "Elf";
+            updateBox.Items.Add("You've Chosen Elf!");
+            //Add stat modifiers
+
+
+            humanBtn.Visible = false;
+            gnomeBtn.Visible = false;
+            orcBtn.Visible = false;
+            elfBtn.Visible = false;
+            raceText.Visible = false;
+        }
+
+        private void orcBtn_Click(object sender, EventArgs e)
+        {
+            charType.Text = "Orc";
+            updateBox.Items.Add("You've Chosen Orc!");
+            //Add stat modifiers
+
+
+            humanBtn.Visible = false;
+            gnomeBtn.Visible = false;
+            orcBtn.Visible = false;
+            elfBtn.Visible = false;
+            raceText.Visible = false;
+        }
     }
 }

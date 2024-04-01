@@ -29,8 +29,6 @@ namespace Hero_s_Journey_Game
         {
             //Need to assign the text from txtBoxName to a player name variable
             CharacterName = txtBoxName2.Text;
-            //Assign Character Race
-            Race = txtboxRace.Text;
             //MessageBox.Show($"Character's name is {name}");
             DialogResult = DialogResult.OK;
             this.Close();
@@ -102,23 +100,19 @@ namespace Hero_s_Journey_Game
         {
             //Set gender to female
             Gender = "Female";
-            maleBtn.Visible = false;
-            preferBtn.Visible = false;
+            
         }
 
         private void maleBtn_Click(object sender, EventArgs e)
         {
             //Set gender to male
             Gender = "Male";
-            femaleBtn.Visible = false;
-            preferBtn.Visible = false;
+            
         }
 
         private void preferBtn_Click(object sender, EventArgs e)
         {
             //Dont set gender
-            femaleBtn.Visible = false;
-            maleBtn.Visible = false;
         }
 
         private void strengthBtn_Click(object sender, EventArgs e)

@@ -266,7 +266,7 @@ namespace Hero_s_Journey_Game {
         public class Weapon : Item // Weapons derived from Item
         {
             public int WeaponDamage { get; set; }
-            public double StrengthModifier { get; set; } // Could use this to let the weapon scale with the player's strength
+            public int StrengthModifier { get; set; } // Could use this to let the weapon scale with the player's strength
             public double DexterityModifier { get; set; }
 
         }

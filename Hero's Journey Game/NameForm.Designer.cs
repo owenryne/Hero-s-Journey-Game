@@ -36,11 +36,6 @@
             this.preferBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
             this.txtBoxName2 = new System.Windows.Forms.TextBox();
-            this.raceLabel = new System.Windows.Forms.Label();
-            this.txtboxRace = new System.Windows.Forms.TextBox();
-            this.modLabel = new System.Windows.Forms.Label();
-            this.strengthBtn = new System.Windows.Forms.Button();
-            this.manaBtn = new System.Windows.Forms.Button();
             this.verifyLabel = new System.Windows.Forms.Label();
             this.btnName2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -120,56 +115,10 @@
             this.txtBoxName2.Size = new System.Drawing.Size(108, 20);
             this.txtBoxName2.TabIndex = 12;
             // 
-            // raceLabel
-            // 
-            this.raceLabel.AutoSize = true;
-            this.raceLabel.Location = new System.Drawing.Point(665, 167);
-            this.raceLabel.Name = "raceLabel";
-            this.raceLabel.Size = new System.Drawing.Size(85, 13);
-            this.raceLabel.TabIndex = 13;
-            this.raceLabel.Text = "Character Race:";
-            // 
-            // txtboxRace
-            // 
-            this.txtboxRace.Location = new System.Drawing.Point(762, 167);
-            this.txtboxRace.Margin = new System.Windows.Forms.Padding(2);
-            this.txtboxRace.Name = "txtboxRace";
-            this.txtboxRace.Size = new System.Drawing.Size(108, 20);
-            this.txtboxRace.TabIndex = 14;
-            // 
-            // modLabel
-            // 
-            this.modLabel.AutoSize = true;
-            this.modLabel.Location = new System.Drawing.Point(667, 227);
-            this.modLabel.Name = "modLabel";
-            this.modLabel.Size = new System.Drawing.Size(80, 13);
-            this.modLabel.TabIndex = 15;
-            this.modLabel.Text = "Character Mod:";
-            // 
-            // strengthBtn
-            // 
-            this.strengthBtn.Location = new System.Drawing.Point(762, 222);
-            this.strengthBtn.Name = "strengthBtn";
-            this.strengthBtn.Size = new System.Drawing.Size(71, 23);
-            this.strengthBtn.TabIndex = 16;
-            this.strengthBtn.Text = "+1 Strength";
-            this.strengthBtn.UseVisualStyleBackColor = true;
-            this.strengthBtn.Click += new System.EventHandler(this.strengthBtn_Click);
-            // 
-            // manaBtn
-            // 
-            this.manaBtn.Location = new System.Drawing.Point(839, 222);
-            this.manaBtn.Name = "manaBtn";
-            this.manaBtn.Size = new System.Drawing.Size(71, 23);
-            this.manaBtn.TabIndex = 18;
-            this.manaBtn.Text = "+1 Mana";
-            this.manaBtn.UseVisualStyleBackColor = true;
-            this.manaBtn.Click += new System.EventHandler(this.manaBtn_Click);
-            // 
             // verifyLabel
             // 
             this.verifyLabel.AutoSize = true;
-            this.verifyLabel.Location = new System.Drawing.Point(693, 316);
+            this.verifyLabel.Location = new System.Drawing.Point(679, 182);
             this.verifyLabel.Name = "verifyLabel";
             this.verifyLabel.Size = new System.Drawing.Size(228, 13);
             this.verifyLabel.TabIndex = 20;
@@ -177,10 +126,10 @@
             // 
             // btnName2
             // 
-            this.btnName2.Location = new System.Drawing.Point(744, 382);
+            this.btnName2.Location = new System.Drawing.Point(744, 220);
             this.btnName2.Margin = new System.Windows.Forms.Padding(2);
             this.btnName2.Name = "btnName2";
-            this.btnName2.Size = new System.Drawing.Size(56, 19);
+            this.btnName2.Size = new System.Drawing.Size(118, 34);
             this.btnName2.TabIndex = 21;
             this.btnName2.Text = "Submit";
             this.btnName2.UseVisualStyleBackColor = true;
@@ -193,11 +142,6 @@
             this.ClientSize = new System.Drawing.Size(1214, 613);
             this.Controls.Add(this.btnName2);
             this.Controls.Add(this.verifyLabel);
-            this.Controls.Add(this.manaBtn);
-            this.Controls.Add(this.strengthBtn);
-            this.Controls.Add(this.modLabel);
-            this.Controls.Add(this.txtboxRace);
-            this.Controls.Add(this.raceLabel);
             this.Controls.Add(this.txtBoxName2);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.preferBtn);
@@ -225,11 +169,6 @@
         private System.Windows.Forms.Button preferBtn;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox txtBoxName2;
-        private System.Windows.Forms.Label raceLabel;
-        private System.Windows.Forms.TextBox txtboxRace;
-        private System.Windows.Forms.Label modLabel;
-        private System.Windows.Forms.Button strengthBtn;
-        private System.Windows.Forms.Button manaBtn;
         private System.Windows.Forms.Label verifyLabel;
         private System.Windows.Forms.Button btnName2;
     }

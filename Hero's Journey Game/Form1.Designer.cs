@@ -54,7 +54,6 @@
             this.charNam = new System.Windows.Forms.TextBox();
             this.charLevel = new System.Windows.Forms.TextBox();
             this.lvlBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.charRegion = new System.Windows.Forms.TextBox();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
@@ -64,14 +63,17 @@
             this.classesText = new System.Windows.Forms.TextBox();
             this.warriorButton = new System.Windows.Forms.Button();
             this.mageButton = new System.Windows.Forms.Button();
-            this.charGender = new System.Windows.Forms.TextBox();
+            this.charType = new System.Windows.Forms.TextBox();
             this.playerHealth = new System.Windows.Forms.Label();
             this.playerHealthBar = new System.Windows.Forms.ProgressBar();
             this.enemyHealth = new System.Windows.Forms.Label();
             this.enemyHealthBar = new System.Windows.Forms.ProgressBar();
             this.rougeButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.raceText = new System.Windows.Forms.TextBox();
+            this.gnomeBtn = new System.Windows.Forms.Button();
+            this.humanBtn = new System.Windows.Forms.Button();
+            this.elfBtn = new System.Windows.Forms.Button();
+            this.orcBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -169,7 +171,7 @@
             // blockButt
             // 
             this.blockButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blockButt.Location = new System.Drawing.Point(98, 262);
+            this.blockButt.Location = new System.Drawing.Point(123, 290);
             this.blockButt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.blockButt.Name = "blockButt";
             this.blockButt.Size = new System.Drawing.Size(53, 23);
@@ -359,16 +361,6 @@
             this.lvlBox.Text = "0";
             this.lvlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(124, 290);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Attack 2";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // charRegion
             // 
             this.charRegion.Location = new System.Drawing.Point(11, 11);
@@ -432,7 +424,7 @@
             // 
             this.classesText.Enabled = false;
             this.classesText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.classesText.Location = new System.Drawing.Point(960, 416);
+            this.classesText.Location = new System.Drawing.Point(960, 475);
             this.classesText.Name = "classesText";
             this.classesText.Size = new System.Drawing.Size(100, 23);
             this.classesText.TabIndex = 26;
@@ -442,7 +434,7 @@
             // 
             // warriorButton
             // 
-            this.warriorButton.Location = new System.Drawing.Point(891, 444);
+            this.warriorButton.Location = new System.Drawing.Point(891, 504);
             this.warriorButton.Name = "warriorButton";
             this.warriorButton.Size = new System.Drawing.Size(75, 23);
             this.warriorButton.TabIndex = 27;
@@ -453,7 +445,7 @@
             // 
             // mageButton
             // 
-            this.mageButton.Location = new System.Drawing.Point(972, 444);
+            this.mageButton.Location = new System.Drawing.Point(973, 504);
             this.mageButton.Name = "mageButton";
             this.mageButton.Size = new System.Drawing.Size(75, 23);
             this.mageButton.TabIndex = 28;
@@ -462,17 +454,17 @@
             this.mageButton.Visible = false;
             this.mageButton.Click += new System.EventHandler(this.mageButton_Click);
             // 
-            // charGender
+            // charType
             // 
-            this.charGender.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charGender.Location = new System.Drawing.Point(82, 94);
-            this.charGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.charGender.Name = "charGender";
-            this.charGender.ReadOnly = true;
-            this.charGender.Size = new System.Drawing.Size(128, 23);
-            this.charGender.TabIndex = 30;
-            this.charGender.Text = "Character Gender";
-            this.charGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.charType.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charType.Location = new System.Drawing.Point(82, 94);
+            this.charType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.charType.Name = "charType";
+            this.charType.ReadOnly = true;
+            this.charType.Size = new System.Drawing.Size(128, 23);
+            this.charType.TabIndex = 30;
+            this.charType.Text = "Character Type";
+            this.charType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // playerHealth
             // 
@@ -512,7 +504,7 @@
             // 
             // rougeButton
             // 
-            this.rougeButton.Location = new System.Drawing.Point(1052, 444);
+            this.rougeButton.Location = new System.Drawing.Point(1053, 504);
             this.rougeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rougeButton.Name = "rougeButton";
             this.rougeButton.Size = new System.Drawing.Size(75, 23);
@@ -522,23 +514,61 @@
             this.rougeButton.Visible = false;
             this.rougeButton.Click += new System.EventHandler(this.rougeButton_Click);
             // 
-            // button2
+            // raceText
             // 
-            this.button2.Location = new System.Drawing.Point(927, 493);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "+5 Strength";
-            this.button2.UseVisualStyleBackColor = true;
+            this.raceText.Enabled = false;
+            this.raceText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.raceText.Location = new System.Drawing.Point(960, 359);
+            this.raceText.Name = "raceText";
+            this.raceText.Size = new System.Drawing.Size(100, 23);
+            this.raceText.TabIndex = 36;
+            this.raceText.Text = "Races";
+            this.raceText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.raceText.Visible = false;
             // 
-            // button3
+            // gnomeBtn
             // 
-            this.button3.Location = new System.Drawing.Point(1031, 493);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "+5 Mana";
-            this.button3.UseVisualStyleBackColor = true;
+            this.gnomeBtn.Location = new System.Drawing.Point(1019, 387);
+            this.gnomeBtn.Name = "gnomeBtn";
+            this.gnomeBtn.Size = new System.Drawing.Size(75, 23);
+            this.gnomeBtn.TabIndex = 37;
+            this.gnomeBtn.Text = "Gnome";
+            this.gnomeBtn.UseVisualStyleBackColor = true;
+            this.gnomeBtn.Visible = false;
+            this.gnomeBtn.Click += new System.EventHandler(this.gnomeBtn_Click);
+            // 
+            // humanBtn
+            // 
+            this.humanBtn.Location = new System.Drawing.Point(927, 388);
+            this.humanBtn.Name = "humanBtn";
+            this.humanBtn.Size = new System.Drawing.Size(75, 23);
+            this.humanBtn.TabIndex = 38;
+            this.humanBtn.Text = "Human";
+            this.humanBtn.UseVisualStyleBackColor = true;
+            this.humanBtn.Visible = false;
+            this.humanBtn.Click += new System.EventHandler(this.humanBtn_Click);
+            // 
+            // elfBtn
+            // 
+            this.elfBtn.Location = new System.Drawing.Point(927, 417);
+            this.elfBtn.Name = "elfBtn";
+            this.elfBtn.Size = new System.Drawing.Size(75, 23);
+            this.elfBtn.TabIndex = 39;
+            this.elfBtn.Text = "Elf";
+            this.elfBtn.UseVisualStyleBackColor = true;
+            this.elfBtn.Visible = false;
+            this.elfBtn.Click += new System.EventHandler(this.elfBtn_Click);
+            // 
+            // orcBtn
+            // 
+            this.orcBtn.Location = new System.Drawing.Point(1019, 416);
+            this.orcBtn.Name = "orcBtn";
+            this.orcBtn.Size = new System.Drawing.Size(75, 23);
+            this.orcBtn.TabIndex = 40;
+            this.orcBtn.Text = "Orc";
+            this.orcBtn.UseVisualStyleBackColor = true;
+            this.orcBtn.Visible = false;
+            this.orcBtn.Click += new System.EventHandler(this.orcBtn_Click);
             // 
             // Form1
             // 
@@ -546,14 +576,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1195, 599);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.orcBtn);
+            this.Controls.Add(this.elfBtn);
+            this.Controls.Add(this.humanBtn);
+            this.Controls.Add(this.gnomeBtn);
+            this.Controls.Add(this.raceText);
             this.Controls.Add(this.rougeButton);
             this.Controls.Add(this.enemyHealthBar);
             this.Controls.Add(this.enemyHealth);
             this.Controls.Add(this.playerHealthBar);
             this.Controls.Add(this.playerHealth);
-            this.Controls.Add(this.charGender);
+            this.Controls.Add(this.charType);
             this.Controls.Add(this.mageButton);
             this.Controls.Add(this.warriorButton);
             this.Controls.Add(this.classesText);
@@ -563,7 +596,6 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.titleBox);
             this.Controls.Add(this.charRegion);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lvlBox);
             this.Controls.Add(this.charLevel);
             this.Controls.Add(this.charNam);
@@ -618,7 +650,6 @@
         private System.Windows.Forms.TextBox charNam;
         private System.Windows.Forms.TextBox charLevel;
         private System.Windows.Forms.TextBox lvlBox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox charRegion;
         private System.Windows.Forms.TextBox titleBox;
         private System.Windows.Forms.ProgressBar progressBar;
@@ -628,14 +659,17 @@
         private System.Windows.Forms.TextBox classesText;
         private System.Windows.Forms.Button warriorButton;
         private System.Windows.Forms.Button mageButton;
-        private System.Windows.Forms.TextBox charGender;
+        private System.Windows.Forms.TextBox charType;
         private System.Windows.Forms.Label playerHealth;
         private System.Windows.Forms.ProgressBar playerHealthBar;
         private System.Windows.Forms.Label enemyHealth;
         private System.Windows.Forms.ProgressBar enemyHealthBar;
         private System.Windows.Forms.Button rougeButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox raceText;
+        private System.Windows.Forms.Button gnomeBtn;
+        private System.Windows.Forms.Button humanBtn;
+        private System.Windows.Forms.Button elfBtn;
+        private System.Windows.Forms.Button orcBtn;
     }
 }
 
