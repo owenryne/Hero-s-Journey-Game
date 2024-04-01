@@ -45,9 +45,7 @@
             this.txtboxRace = new System.Windows.Forms.TextBox();
             this.modLabel = new System.Windows.Forms.Label();
             this.strengthBtn = new System.Windows.Forms.Button();
-            this.speedBtn = new System.Windows.Forms.Button();
             this.manaBtn = new System.Windows.Forms.Button();
-            this.defBtn = new System.Windows.Forms.Button();
             this.verifyLabel = new System.Windows.Forms.Label();
             this.btnName2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -211,35 +209,15 @@
             this.strengthBtn.UseVisualStyleBackColor = true;
             this.strengthBtn.Click += new System.EventHandler(this.strengthBtn_Click);
             // 
-            // speedBtn
-            // 
-            this.speedBtn.Location = new System.Drawing.Point(839, 222);
-            this.speedBtn.Name = "speedBtn";
-            this.speedBtn.Size = new System.Drawing.Size(71, 23);
-            this.speedBtn.TabIndex = 17;
-            this.speedBtn.Text = "+1 Speed";
-            this.speedBtn.UseVisualStyleBackColor = true;
-            this.speedBtn.Click += new System.EventHandler(this.speedBtn_Click);
-            // 
             // manaBtn
             // 
-            this.manaBtn.Location = new System.Drawing.Point(762, 251);
+            this.manaBtn.Location = new System.Drawing.Point(839, 222);
             this.manaBtn.Name = "manaBtn";
             this.manaBtn.Size = new System.Drawing.Size(71, 23);
             this.manaBtn.TabIndex = 18;
             this.manaBtn.Text = "+1 Mana";
             this.manaBtn.UseVisualStyleBackColor = true;
             this.manaBtn.Click += new System.EventHandler(this.manaBtn_Click);
-            // 
-            // defBtn
-            // 
-            this.defBtn.Location = new System.Drawing.Point(839, 251);
-            this.defBtn.Name = "defBtn";
-            this.defBtn.Size = new System.Drawing.Size(71, 23);
-            this.defBtn.TabIndex = 19;
-            this.defBtn.Text = "+1 Defence";
-            this.defBtn.UseVisualStyleBackColor = true;
-            this.defBtn.Click += new System.EventHandler(this.defBtn_Click);
             // 
             // verifyLabel
             // 
@@ -268,9 +246,7 @@
             this.ClientSize = new System.Drawing.Size(1214, 613);
             this.Controls.Add(this.btnName2);
             this.Controls.Add(this.verifyLabel);
-            this.Controls.Add(this.defBtn);
             this.Controls.Add(this.manaBtn);
-            this.Controls.Add(this.speedBtn);
             this.Controls.Add(this.strengthBtn);
             this.Controls.Add(this.modLabel);
             this.Controls.Add(this.txtboxRace);
@@ -317,9 +293,7 @@
         private System.Windows.Forms.TextBox txtboxRace;
         private System.Windows.Forms.Label modLabel;
         private System.Windows.Forms.Button strengthBtn;
-        private System.Windows.Forms.Button speedBtn;
         private System.Windows.Forms.Button manaBtn;
-        private System.Windows.Forms.Button defBtn;
         private System.Windows.Forms.Label verifyLabel;
         private System.Windows.Forms.Button btnName2;
     }

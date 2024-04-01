@@ -15,7 +15,8 @@ namespace Hero_s_Journey_Game
 
         public string CharacterName { get; private set; }
         public string Gender {  get; private set; }
-        public string Race { get; private set; }  
+        public string Race { get; private set; }
+        public GameWorld.Weapon Weapon { get; set; }
 
         public NameForm()
         {
@@ -144,13 +145,6 @@ namespace Hero_s_Journey_Game
             defBtn.Visible = false;
         }
 
-        private void speedBtn_Click(object sender, EventArgs e)
-        {
-            //Once DB is set up, set to speed +1
-            strengthBtn.Visible = false;
-            manaBtn.Visible = false;
-            defBtn.Visible = false;
-        }
 
         private void manaBtn_Click(object sender, EventArgs e)
         {
@@ -160,12 +154,5 @@ namespace Hero_s_Journey_Game
             defBtn.Visible = false;
         }
 
-        private void defBtn_Click(object sender, EventArgs e)
-        {
-            //Once DB is set up, set to Defence +1
-            strengthBtn.Visible = false;
-            speedBtn.Visible = false;
-            manaBtn.Visible = false;
-        }
     }
 }
