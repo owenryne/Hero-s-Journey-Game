@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.charLabel2 = new System.Windows.Forms.Label();
-            this.txtboxName = new System.Windows.Forms.TextBox();
-            this.btnName = new System.Windows.Forms.Button();
-            this.charLabel1 = new System.Windows.Forms.Label();
-            this.orLabel = new System.Windows.Forms.Label();
             this.charLabel3 = new System.Windows.Forms.Label();
             this.createBtn = new System.Windows.Forms.Button();
             this.genderLabel = new System.Windows.Forms.Label();
@@ -50,68 +45,20 @@
             this.btnName2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // charLabel2
-            // 
-            this.charLabel2.AutoSize = true;
-            this.charLabel2.Location = new System.Drawing.Point(44, 49);
-            this.charLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.charLabel2.Name = "charLabel2";
-            this.charLabel2.Size = new System.Drawing.Size(117, 13);
-            this.charLabel2.TabIndex = 0;
-            this.charLabel2.Text = "Enter Your Name Hero!";
-            // 
-            // txtboxName
-            // 
-            this.txtboxName.Location = new System.Drawing.Point(47, 64);
-            this.txtboxName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtboxName.Name = "txtboxName";
-            this.txtboxName.Size = new System.Drawing.Size(108, 20);
-            this.txtboxName.TabIndex = 1;
-            // 
-            // btnName
-            // 
-            this.btnName.Location = new System.Drawing.Point(47, 88);
-            this.btnName.Margin = new System.Windows.Forms.Padding(2);
-            this.btnName.Name = "btnName";
-            this.btnName.Size = new System.Drawing.Size(56, 19);
-            this.btnName.TabIndex = 2;
-            this.btnName.Text = "Submit";
-            this.btnName.UseVisualStyleBackColor = true;
-            this.btnName.Click += new System.EventHandler(this.btnName_Click);
-            // 
-            // charLabel1
-            // 
-            this.charLabel1.AutoSize = true;
-            this.charLabel1.Location = new System.Drawing.Point(44, 22);
-            this.charLabel1.Name = "charLabel1";
-            this.charLabel1.Size = new System.Drawing.Size(157, 13);
-            this.charLabel1.TabIndex = 3;
-            this.charLabel1.Text = "If you have a character already:";
-            // 
-            // orLabel
-            // 
-            this.orLabel.AutoSize = true;
-            this.orLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orLabel.Location = new System.Drawing.Point(230, 62);
-            this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(43, 25);
-            this.orLabel.TabIndex = 4;
-            this.orLabel.Text = "OR";
-            // 
             // charLabel3
             // 
             this.charLabel3.AutoSize = true;
             this.charLabel3.Location = new System.Drawing.Point(315, 22);
             this.charLabel3.Name = "charLabel3";
-            this.charLabel3.Size = new System.Drawing.Size(183, 13);
+            this.charLabel3.Size = new System.Drawing.Size(128, 13);
             this.charLabel3.TabIndex = 5;
-            this.charLabel3.Text = "If you don\'t have a character already:";
+            this.charLabel3.Text = "Start your Journey Today!";
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(339, 62);
+            this.createBtn.Location = new System.Drawing.Point(278, 62);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(132, 23);
+            this.createBtn.Size = new System.Drawing.Size(211, 62);
             this.createBtn.TabIndex = 6;
             this.createBtn.Text = "Create Character";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -259,11 +206,6 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.charLabel3);
-            this.Controls.Add(this.orLabel);
-            this.Controls.Add(this.charLabel1);
-            this.Controls.Add(this.btnName);
-            this.Controls.Add(this.txtboxName);
-            this.Controls.Add(this.charLabel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "NameForm";
@@ -275,12 +217,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label charLabel2;
-        private System.Windows.Forms.TextBox txtboxName;
-        private System.Windows.Forms.Button btnName;
-        private System.Windows.Forms.Label charLabel1;
-        private System.Windows.Forms.Label orLabel;
         private System.Windows.Forms.Label charLabel3;
         private System.Windows.Forms.Button createBtn;
         private System.Windows.Forms.Label genderLabel;
