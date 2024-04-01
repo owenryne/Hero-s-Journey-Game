@@ -17,20 +17,13 @@ namespace Hero_s_Journey_Game
         public string Gender {  get; private set; }
         public string Race { get; private set; }
         public GameWorld.Weapon Weapon { get; set; }
+        
 
         public NameForm()
         {
             InitializeComponent();
         }
 
-        private void btnName_Click(object sender, EventArgs e)
-        {
-            //Need to assign the text from txtBoxName to a player name variable
-            CharacterName = txtboxName.Text;
-            //MessageBox.Show($"Character's name is {name}");
-            DialogResult = DialogResult.OK;
-            this.Close();
-        }
 
         private void btnName2_Click(object sender, EventArgs e)
         {
@@ -75,11 +68,6 @@ namespace Hero_s_Journey_Game
             //im not sure if theres an easier way to do this
             //just for making the UI look cleaner upon creating a character
             //gonna look real clunky but it works lol - Owen
-            charLabel1.Visible = false;
-            charLabel2.Visible = false;
-            txtboxName.Visible = false;
-            btnName.Visible = false;
-            orLabel.Visible = false;
             charLabel3.Visible = false;
             createBtn.Visible = false;
 
@@ -136,8 +124,9 @@ namespace Hero_s_Journey_Game
         private void strengthBtn_Click(object sender, EventArgs e)
         {
             //Once DB is set up, set to strength +1, or WeaponDamage +1
-
             manaBtn.Visible = false;
+            Weapon.WeaponDamage = 0;
+            Weapon.WeaponDamage = Weapon.WeaponDamage + 5;
 
         }
 
@@ -146,7 +135,8 @@ namespace Hero_s_Journey_Game
         {
             //Once DB is set up, set to Mana +1
             strengthBtn.Visible = false;
-
+            Weapon.WeaponDamage = 0;
+            Weapon.WeaponDamage = Weapon.WeaponDamage + 5;
         }
 
     }
