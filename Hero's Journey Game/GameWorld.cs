@@ -231,7 +231,7 @@ namespace Hero_s_Journey_Game {
                 if (newZone is Town) // If the zone is a town, the player will heal to full health
                 {
                     player.Health = player.MaxHealth;
-                    form.AddUpdate("You find respite in town and have recovered your health.");
+                    form.AddUpdate("You find respite in a town and have recovered your health.");
                     form.UpdateHealth(player.Health);
 
                 }
@@ -266,7 +266,14 @@ namespace Hero_s_Journey_Game {
         public class Weapon : Item // Weapons derived from Item
         {
             public int WeaponDamage { get; set; }
-           
+            public double StrengthModifier { get; set; } // Could use this to let the weapon scale with the player's strength
+            public double DexterityModifier { get; set; }
+
+        }
+
+        public class Potion : Item // Potions derived from Item
+        {
+            public int PotionHeal { get; set; }
         }
     }
 }
