@@ -99,7 +99,7 @@ namespace Hero_s_Journey_Game {
             {
                 ZoneName = "Plain";
                 ZoneDescription = "A vast open plain with little to no cover.";
-                EncounterRate = 0.40;
+                EncounterRate = 0.4;
 
                 Enemies = new List<Enemy>
                 {
@@ -124,7 +124,7 @@ namespace Hero_s_Journey_Game {
                     new Enemy
                     {
                         EnemyName = "Boar",
-                        EnemyDescription = "A large angry boar with two large tusks",
+                        EnemyDescription = "A large angry boar with two large tusks.",
                         EnemyHealth = 50,
                         EnemyMaxHealth = 50,
                         EnemyDamage = 10,
@@ -140,7 +140,7 @@ namespace Hero_s_Journey_Game {
             {
                 ZoneName = "Cave";
                 ZoneDescription = "A dark, damp cave with a musty smell.";
-                EncounterRate = 0.60;
+                EncounterRate = 0.6;
 
                 Enemies = new List<Enemy>
                 {
@@ -232,6 +232,7 @@ namespace Hero_s_Journey_Game {
                     player.Health = player.MaxHealth;
                     form.AddUpdate("You find respite in town and have recovered your health.");
                     form.UpdateHealth(player.Health);
+                    form.EnterTown();
                 }
 
 
@@ -264,8 +265,7 @@ namespace Hero_s_Journey_Game {
         public class Weapon : Item // Weapons derived from Item
         {
             public int WeaponDamage { get; set; }
-            public double StrengthModifier { get; set; } // Could use this to let the weapon scale with the player's strength
-            public double DexterityModifier { get; set; }
+           
         }
     }
 }

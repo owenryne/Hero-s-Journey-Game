@@ -533,6 +533,7 @@
             this.rougeButton.TabIndex = 35;
             this.rougeButton.Text = "Rogue";
             this.rougeButton.UseVisualStyleBackColor = true;
+            this.rougeButton.Visible = false;
             this.rougeButton.Click += new System.EventHandler(this.rougeButton_Click);
             // 
             // Form1
