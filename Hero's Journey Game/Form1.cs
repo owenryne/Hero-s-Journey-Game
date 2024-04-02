@@ -72,6 +72,40 @@ namespace Hero_s_Journey_Game
             updateBox.Items.Add(update);
         }
 
+        public void GameOver()
+        {
+            // Reset player's properties
+            gameWorld.player.Health = gameWorld.player.MaxHealth;
+            gameWorld.player.EXP = 0;
+            progressBar.Value = 0;
+            lvlBox.Text = "0";
+            charRegion.Text = "";
+            updateBox.Items.Clear();
+            AddUpdate("Game Over! You have been defeated. Press Start to play again!");
+
+            playerHealthBar.Visible = false;
+            playerHealth.Visible = false;
+
+            // Reset enemy's properties
+            currentEnemy = null;
+            enemyHealth.Visible = false;
+            enemyHealthBar.Visible = false;
+
+            // Reset game world
+            gameWorld = new GameWorld(10, 10, this);
+
+            // Reset UI elements
+            startButton.Visible = true;
+            attackButt.Enabled = false;
+            blockButt.Enabled = false;
+            forwardButt.Enabled = false;
+            backButton.Enabled = false;
+            leftButton.Enabled = false;
+            rightButt.Enabled = false;
+
+            // Add more resets as needed...
+        }
+
         public void UpdateHealth(int health)
         {
             gameWorld.player.Health = health;
@@ -331,8 +365,8 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage;
             AddUpdate($"{currentEnemy.EnemyName} attacks you for {currentEnemy.EnemyDamage} damage!");
-            UpdateHealth(gameWorld.player.Health);
 
+            if (gameWorld.player.Health > 0) { UpdateHealth(gameWorld.player.Health); }
 
             if (gameWorld.player.Health <= 0)
             {
@@ -342,7 +376,10 @@ namespace Hero_s_Journey_Game
                 enemyHealthBar.Visible = false;
                 attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
                 blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
+                GameOver();
             }
+
+            
         }
 
 
@@ -355,8 +392,8 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage / 2; // Take half damage when blocking
             AddUpdate($"{gameWorld.player.GetType().Name} blocks and takes {currentEnemy.EnemyDamage / 2} damage!");
-            UpdateHealth(gameWorld.player.Health);
 
+            if (gameWorld.player.Health > 0) { UpdateHealth(gameWorld.player.Health); }
 
             if (gameWorld.player.Health <= 0)
             {
@@ -366,7 +403,10 @@ namespace Hero_s_Journey_Game
                 enemyHealthBar.Visible = false;
                 attackButt.Enabled = false; // Disables the attack button until a new enemy is encountered to prevent exceptions
                 blockButt.Enabled = false; // Disables the block button until a new enemy is encountered
+                GameOver();
             }
+
+            
         }
 
         private void humanBtn_Click(object sender, EventArgs e)
