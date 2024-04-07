@@ -377,6 +377,7 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage;
             AddUpdate($"{currentEnemy.EnemyName} attacks you for {currentEnemy.EnemyDamage} damage!");
+            UpdateHealtlhDisplay(gameWorld.player.Health, gameWorld.player.MaxHealth);
 
 
             if (gameWorld.player.Health > 0) { UpdateHealth(gameWorld.player.Health); }
@@ -405,6 +406,7 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage / 2; // Take half damage when blocking
             AddUpdate($"{gameWorld.player.GetType().Name} blocks and takes {currentEnemy.EnemyDamage / 2} damage!");
+            UpdateHealtlhDisplay(gameWorld.player.Health, gameWorld.player.MaxHealth);
 
             if (gameWorld.player.Health > 0) { UpdateHealth(gameWorld.player.Health); }
 
