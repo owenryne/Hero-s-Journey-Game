@@ -33,6 +33,7 @@ namespace Hero_s_Journey_Game
             Health = 100;
             MaxHealth = 100;
             Strength = 25;
+            Dexterity = 10;
             Mana = 0;
 
             Weapon = new GameWorld.Weapon 
@@ -56,6 +57,7 @@ namespace Hero_s_Journey_Game
             MaxHealth = 100;
             Strength = 5;
             Mana = 50;
+            Dexterity = 10;
             
             Weapon = new GameWorld.Weapon
             {

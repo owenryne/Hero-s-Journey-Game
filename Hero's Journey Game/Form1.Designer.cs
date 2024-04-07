@@ -74,6 +74,10 @@
             this.elfBtn = new System.Windows.Forms.Button();
             this.orcBtn = new System.Windows.Forms.Button();
             this.charRace = new System.Windows.Forms.TextBox();
+            this.charStats = new System.Windows.Forms.TextBox();
+            this.charHealth = new System.Windows.Forms.TextBox();
+            this.charStr = new System.Windows.Forms.TextBox();
+            this.charDex = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // forwardButt
@@ -149,7 +153,7 @@
             // combatText
             // 
             this.combatText.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combatText.Location = new System.Drawing.Point(82, 263);
+            this.combatText.Location = new System.Drawing.Point(110, 306);
             this.combatText.Margin = new System.Windows.Forms.Padding(2);
             this.combatText.Name = "combatText";
             this.combatText.ReadOnly = true;
@@ -161,7 +165,7 @@
             // attackButt
             // 
             this.attackButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attackButt.Location = new System.Drawing.Point(76, 290);
+            this.attackButt.Location = new System.Drawing.Point(104, 333);
             this.attackButt.Name = "attackButt";
             this.attackButt.Size = new System.Drawing.Size(57, 23);
             this.attackButt.TabIndex = 8;
@@ -172,7 +176,7 @@
             // blockButt
             // 
             this.blockButt.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blockButt.Location = new System.Drawing.Point(138, 290);
+            this.blockButt.Location = new System.Drawing.Point(166, 333);
             this.blockButt.Margin = new System.Windows.Forms.Padding(2);
             this.blockButt.Name = "blockButt";
             this.blockButt.Size = new System.Drawing.Size(53, 23);
@@ -575,12 +579,64 @@
             this.charRace.Text = "Character Race";
             this.charRace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // charStats
+            // 
+            this.charStats.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charStats.Location = new System.Drawing.Point(82, 190);
+            this.charStats.Margin = new System.Windows.Forms.Padding(2);
+            this.charStats.Name = "charStats";
+            this.charStats.ReadOnly = true;
+            this.charStats.Size = new System.Drawing.Size(128, 23);
+            this.charStats.TabIndex = 42;
+            this.charStats.Text = "Character Stats";
+            this.charStats.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // charHealth
+            // 
+            this.charHealth.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charHealth.Location = new System.Drawing.Point(82, 217);
+            this.charHealth.Margin = new System.Windows.Forms.Padding(2);
+            this.charHealth.Name = "charHealth";
+            this.charHealth.ReadOnly = true;
+            this.charHealth.Size = new System.Drawing.Size(128, 23);
+            this.charHealth.TabIndex = 43;
+            this.charHealth.Text = "Character Health";
+            this.charHealth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // charStr
+            // 
+            this.charStr.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charStr.Location = new System.Drawing.Point(82, 244);
+            this.charStr.Margin = new System.Windows.Forms.Padding(2);
+            this.charStr.Name = "charStr";
+            this.charStr.ReadOnly = true;
+            this.charStr.Size = new System.Drawing.Size(128, 23);
+            this.charStr.TabIndex = 44;
+            this.charStr.Text = "Character Strength";
+            this.charStr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // charDex
+            // 
+            this.charDex.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charDex.Location = new System.Drawing.Point(82, 271);
+            this.charDex.Margin = new System.Windows.Forms.Padding(2);
+            this.charDex.Name = "charDex";
+            this.charDex.ReadOnly = true;
+            this.charDex.Size = new System.Drawing.Size(128, 23);
+            this.charDex.TabIndex = 45;
+            this.charDex.Text = "Character Dex";
+            this.charDex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(1195, 599);
+            this.Controls.Add(this.charDex);
+            this.Controls.Add(this.charStr);
+            this.Controls.Add(this.charHealth);
+            this.Controls.Add(this.charStats);
             this.Controls.Add(this.charRace);
             this.Controls.Add(this.orcBtn);
             this.Controls.Add(this.elfBtn);
@@ -675,6 +731,10 @@
         private System.Windows.Forms.Button elfBtn;
         private System.Windows.Forms.Button orcBtn;
         private System.Windows.Forms.TextBox charRace;
+        private System.Windows.Forms.TextBox charStats;
+        private System.Windows.Forms.TextBox charHealth;
+        private System.Windows.Forms.TextBox charStr;
+        private System.Windows.Forms.TextBox charDex;
     }
 }
 

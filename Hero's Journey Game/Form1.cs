@@ -79,7 +79,6 @@ namespace Hero_s_Journey_Game
             gameWorld.player.EXP = 0;
             progressBar.Value = 0;
             lvlBox.Text = "0";
-            charRegion.Text = "";
             updateBox.Items.Clear();
             AddUpdate("Game Over! You have been defeated. Press Start to play again!");
 
@@ -103,6 +102,21 @@ namespace Hero_s_Journey_Game
             leftButton.Enabled = false;
             rightButt.Enabled = false;
 
+        }
+
+        public void UpdateHealtlhDisplay(int health, int maxhealth)
+        {
+            charHealth.Text = $"Health: {health}/{maxhealth}";
+        }
+
+        public void UpdateStrengthDisplay(int strength)
+        {
+            charStr.Text = $"Strength: {strength}";
+        }
+
+        public void UpdateDexterityDisplay(int dexterity)
+        {
+            charDex.Text = $"Dexterity: {dexterity}";
         }
 
         public void UpdateHealth(int health)
@@ -157,7 +171,6 @@ namespace Hero_s_Journey_Game
             classesText.Visible = true;
             progressBar.Value = 0;
             lvlBox.Text = "0";
-            charRegion.Text = "";
 
            
         }
@@ -364,6 +377,7 @@ namespace Hero_s_Journey_Game
 
             gameWorld.player.Health -= currentEnemy.EnemyDamage;
             AddUpdate($"{currentEnemy.EnemyName} attacks you for {currentEnemy.EnemyDamage} damage!");
+
 
             if (gameWorld.player.Health > 0) { UpdateHealth(gameWorld.player.Health); }
 
