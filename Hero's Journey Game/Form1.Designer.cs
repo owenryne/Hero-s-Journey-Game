@@ -54,7 +54,6 @@
             this.charNam = new System.Windows.Forms.TextBox();
             this.charLevel = new System.Windows.Forms.TextBox();
             this.lvlBox = new System.Windows.Forms.TextBox();
-            this.charRegion = new System.Windows.Forms.TextBox();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.startButton = new System.Windows.Forms.Button();
@@ -363,14 +362,6 @@
             this.lvlBox.Text = "0";
             this.lvlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // charRegion
-            // 
-            this.charRegion.Location = new System.Drawing.Point(11, 11);
-            this.charRegion.Margin = new System.Windows.Forms.Padding(2);
-            this.charRegion.Name = "charRegion";
-            this.charRegion.Size = new System.Drawing.Size(76, 20);
-            this.charRegion.TabIndex = 29;
-            // 
             // titleBox
             // 
             this.titleBox.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -610,7 +601,6 @@
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.titleBox);
-            this.Controls.Add(this.charRegion);
             this.Controls.Add(this.lvlBox);
             this.Controls.Add(this.charLevel);
             this.Controls.Add(this.charNam);
@@ -665,7 +655,6 @@
         private System.Windows.Forms.TextBox charNam;
         private System.Windows.Forms.TextBox charLevel;
         private System.Windows.Forms.TextBox lvlBox;
-        private System.Windows.Forms.TextBox charRegion;
         private System.Windows.Forms.TextBox titleBox;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button startButton;
