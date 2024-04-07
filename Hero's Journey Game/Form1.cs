@@ -84,6 +84,9 @@ namespace Hero_s_Journey_Game
 
             playerHealthBar.Visible = false;
             playerHealth.Visible = false;
+            charDex.Text = "";
+            charStr.Text = "";
+            charHealth.Text = "";
 
             // Reset enemy's properties
             currentEnemy = null;
@@ -356,10 +359,15 @@ namespace Hero_s_Journey_Game
                     gameWorld.player.MaxHealth += 10; // Increase the player's max health
                     playerHealthBar.Maximum = gameWorld.player.MaxHealth; // Update the player's health bar with the new max HP
                     gameWorld.player.Weapon.WeaponDamage += 5; // Gain 5 damage for leveling up // I want to tie in stregth to this cause it doesnt make a lot of sense to lvl up weapon damage rather than a charachter attribute (mabye make stregnth work as a multiplier for weapon damage and then do something similar for magic and dex depending on the class)
+                    gameWorld.player.Strength += 5; // Gain 5 strength for leveling up
+                    gameWorld.player.Dexterity += 5; // Gain 5 dexterity for leveling up
                     progressBar.Value = 0; // Reset the progress bar
                     progressBar.Maximum += 50; // Increase the needed EXP for the next level
-                    AddUpdate($"You have leveled up! You gained 10 health and 5 damage!");
+                    AddUpdate($"You have leveled up! You gained 10 health, 5 damage, and +5 to your stats!");
                     lvlBox.Text = (Convert.ToInt32(lvlBox.Text) + 1).ToString(); // Update the level box
+                    UpdateDexterityDisplay(gameWorld.player.Dexterity);
+                    UpdateStrengthDisplay(gameWorld.player.Strength);
+                    UpdateHealtlhDisplay(gameWorld.player.Health, gameWorld.player.MaxHealth);
                 }
                 else
                 {
