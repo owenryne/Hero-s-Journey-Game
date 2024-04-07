@@ -103,7 +103,6 @@ namespace Hero_s_Journey_Game
             leftButton.Enabled = false;
             rightButt.Enabled = false;
 
-            // Add more resets as needed...
         }
 
         public void UpdateHealth(int health)
@@ -411,7 +410,7 @@ namespace Hero_s_Journey_Game
 
         private void humanBtn_Click(object sender, EventArgs e)
         {
-            charType.Text = "Human";
+            charRace.Text = "Human";
             updateBox.Items.Add("You've Chosen Human!");
             //Add stat modifiers
 
@@ -425,7 +424,7 @@ namespace Hero_s_Journey_Game
 
         private void gnomeBtn_Click(object sender, EventArgs e)
         {
-            charType.Text = "Gnome";
+            charRace.Text = "Gnome";
             updateBox.Items.Add("You've Chosen Gnome!");
             //Add stat modifiers
             gameWorld.player.Strength -= 3;
@@ -442,7 +441,7 @@ namespace Hero_s_Journey_Game
 
         private void elfBtn_Click(object sender, EventArgs e)
         {
-            charType.Text = "Elf";
+            charRace.Text = "Elf";
             updateBox.Items.Add("You've Chosen Elf!");
             //Add stat modifiers
             gameWorld.player.Dexterity += 5;
@@ -458,7 +457,7 @@ namespace Hero_s_Journey_Game
 
         private void orcBtn_Click(object sender, EventArgs e)
         {
-            charType.Text = "Orc";
+            charRace.Text = "Orc";
             updateBox.Items.Add("You've Chosen Orc!");
             //Add stat modifiers
             gameWorld.player.Strength += 5;
