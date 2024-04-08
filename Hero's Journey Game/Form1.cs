@@ -87,6 +87,8 @@ namespace Hero_s_Journey_Game
             charDex.Text = "";
             charStr.Text = "";
             charHealth.Text = "";
+            charType.Text = "";
+            charRace.Text = "";
 
             // Reset enemy's properties
             currentEnemy = null;
